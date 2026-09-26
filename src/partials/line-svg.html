@@ -1,0 +1,53 @@
+          <div class="line-scroll" tabindex="0" role="region" aria-label="Continuous anodizing process diagram">
+          <svg class="line-svg" viewBox="0 0 1200 350" role="img" aria-labelledby="line-desc">
+            <desc id="line-desc">The continuous anodizing line: a raw coil unwinds, the strip dips into five baths in turn (cleaning and etching as pre-treatment, anodizing, then colouring and sealing as post-treatment) and is rewound as an anodized coil.</desc>
+            <!-- baths: empty top, liquid below -->
+            <g class="baths">
+              <g><rect class="bath" x="230" y="110" width="120" height="140" rx="10"/><rect class="liquid" x="231" y="138" width="118" height="111" rx="9"/></g>
+              <g><rect class="bath" x="390" y="110" width="120" height="140" rx="10"/><rect class="liquid" x="391" y="138" width="118" height="111" rx="9"/></g>
+              <g class="key"><rect class="bath" x="550" y="110" width="120" height="140" rx="10"/><rect class="liquid" x="551" y="138" width="118" height="111" rx="9"/></g>
+              <g><rect class="bath" x="710" y="110" width="120" height="140" rx="10"/><rect class="liquid" x="711" y="138" width="118" height="111" rx="9"/></g>
+              <g><rect class="bath" x="870" y="110" width="120" height="140" rx="10"/><rect class="liquid" x="871" y="138" width="118" height="111" rx="9"/></g>
+            </g>
+            <!-- coils -->
+            <g class="coil" transform="translate(110 160)">
+              <circle r="58"/><circle r="46"/><circle r="36"/><circle r="26"/><circle class="hub" r="14"/><circle class="axle" r="5"/>
+            </g>
+            <g class="coil" transform="translate(1090 160)">
+              <circle r="58"/><circle r="46"/><circle r="36"/><circle r="26"/><circle class="hub" r="14"/><circle class="axle" r="5"/>
+            </g>
+            <!-- the strip: over a top roller, down into each bath and back up -->
+            <path class="strip-path" d="M110 102 L210 62 L290 222 L370 62 L450 222 L530 62 L610 222 L690 62 L770 222 L850 62 L930 222 L1010 62 L1090 102"/>
+            <g class="rollers">
+              <circle cx="210" cy="62" r="9"/><circle cx="370" cy="62" r="9"/><circle cx="530" cy="62" r="9"/>
+              <circle cx="690" cy="62" r="9"/><circle cx="850" cy="62" r="9"/><circle cx="1010" cy="62" r="9"/>
+              <circle cx="290" cy="222" r="9"/><circle cx="450" cy="222" r="9"/><circle cx="610" cy="222" r="9"/>
+              <circle cx="770" cy="222" r="9"/><circle cx="930" cy="222" r="9"/>
+            </g>
+            <g class="roller-dots">
+              <circle cx="210" cy="62" r="3"/><circle cx="370" cy="62" r="3"/><circle cx="530" cy="62" r="3"/>
+              <circle cx="690" cy="62" r="3"/><circle cx="850" cy="62" r="3"/><circle cx="1010" cy="62" r="3"/>
+              <circle cx="290" cy="222" r="3"/><circle cx="450" cy="222" r="3"/><circle cx="610" cy="222" r="3"/>
+              <circle cx="770" cy="222" r="3"/><circle cx="930" cy="222" r="3"/>
+            </g>
+            <!-- labels -->
+            <g class="labels">
+              <text class="end" x="110" y="285">Raw coil</text>
+              <text x="290" y="285">Cleaning</text>
+              <text x="450" y="285">Etching</text>
+              <text class="key" x="610" y="285">Anodizing</text>
+              <text x="770" y="285">Colouring</text>
+              <text x="930" y="285">Sealing</text>
+              <text class="end" x="1090" y="285">Anodized coil</text>
+            </g>
+            <!-- phases -->
+            <g class="phases">
+              <path d="M232 302 v8 h276 v-8"/>
+              <path class="key" d="M552 302 v8 h116 v-8"/>
+              <path d="M712 302 v8 h276 v-8"/>
+              <text x="370" y="334">PRE-TREATMENT</text>
+              <text class="key" x="610" y="334">ANODIZE</text>
+              <text x="850" y="334">POST-TREATMENT</text>
+            </g>
+          </svg>
+          </div>

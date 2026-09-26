@@ -1,0 +1,243 @@
+{
+  "finishes": {
+    "mill": {
+      "label": "Mill finish",
+      "strip": "mill",
+      "image": "assets/img/tex-mill.jpg",
+      "imageAlt": "Mill finish anodized aluminium sample",
+      "desc": "The natural surface of the rolled metal. Raw and industrial."
+    },
+    "brushed": {
+      "label": "Brushed",
+      "strip": "brushed",
+      "image": "assets/img/tex-brushed.jpg",
+      "imageAlt": "Brushed finish anodized aluminium sample",
+      "desc": "A fine linear texture that hides fingerprints and small marks."
+    },
+    "bright": {
+      "label": "Bright",
+      "strip": "mirror",
+      "image": "assets/img/coil-pallet.jpg",
+      "imageAlt": "Light reflected in the polished surface of an aluminium coil",
+      "desc": "Smooth and highly reflective, for surfaces that should shine."
+    }
+  },
+  "swatches": {
+    "mill": [
+      {
+        "code": "natural",
+        "name": "Natural",
+        "color": "#ddd6d0",
+        "image": "assets/img/swatches/mill-natural.jpg"
+      },
+      {
+        "code": "bronze",
+        "name": "Bronze",
+        "color": "#e3d2b4",
+        "image": "assets/img/swatches/mill-bronze.jpg"
+      },
+      {
+        "code": "bronze-20",
+        "name": "Bronze 20",
+        "color": "#e0d0b1",
+        "image": "assets/img/swatches/mill-bronze-20.jpg"
+      },
+      {
+        "code": "bronze-30",
+        "name": "Bronze 30",
+        "color": "#d6c097",
+        "image": "assets/img/swatches/mill-bronze-30.jpg"
+      },
+      {
+        "code": "bronze-40",
+        "name": "Bronze 40",
+        "color": "#b89c71",
+        "image": "assets/img/swatches/mill-bronze-40.jpg"
+      },
+      {
+        "code": "bronze-60",
+        "name": "Bronze 60",
+        "color": "#684b3c",
+        "image": "assets/img/swatches/mill-bronze-60.jpg"
+      },
+      {
+        "code": "gold-20",
+        "name": "Gold 20",
+        "color": "#e8d5a9",
+        "image": "assets/img/swatches/mill-gold-20.jpg"
+      },
+      {
+        "code": "gold-40",
+        "name": "Gold 40",
+        "color": "#dec286",
+        "image": "assets/img/swatches/mill-gold-40.jpg"
+      },
+      {
+        "code": "copper-30",
+        "name": "Copper 30",
+        "color": "#b67e63",
+        "image": "assets/img/swatches/mill-copper-30.jpg"
+      },
+      {
+        "code": "copper-50",
+        "name": "Copper 50",
+        "color": "#c78065",
+        "image": "assets/img/swatches/mill-copper-50.jpg"
+      },
+      {
+        "code": "rosegoldcu30g30",
+        "name": "Rose gold Cu30 G30",
+        "color": "#ca996e",
+        "image": "assets/img/swatches/mill-rosegoldcu30g30.jpg"
+      },
+      {
+        "code": "rosegoldcu50g30",
+        "name": "Rose gold Cu50 G30",
+        "color": "#844c3a",
+        "image": "assets/img/swatches/mill-rosegoldcu50g30.jpg"
+      }
+    ],
+    "brushed": [
+      {
+        "code": "natural",
+        "name": "Natural",
+        "color": "#d2c3b4",
+        "image": "assets/img/swatches/brushed-natural.jpg"
+      },
+      {
+        "code": "bronze-10",
+        "name": "Bronze 10",
+        "color": "#e7d7bd",
+        "image": "assets/img/swatches/brushed-bronze-10.jpg"
+      },
+      {
+        "code": "bronze-20",
+        "name": "Bronze 20",
+        "color": "#b0a490",
+        "image": "assets/img/swatches/brushed-bronze-20.jpg"
+      },
+      {
+        "code": "bronze-30",
+        "name": "Bronze 30",
+        "color": "#dac5a5",
+        "image": "assets/img/swatches/brushed-bronze-30.jpg"
+      },
+      {
+        "code": "bronze-40",
+        "name": "Bronze 40",
+        "color": "#cdae82",
+        "image": "assets/img/swatches/brushed-bronze-40.jpg"
+      },
+      {
+        "code": "bronze-50",
+        "name": "Bronze 50",
+        "color": "#986d46",
+        "image": "assets/img/swatches/brushed-bronze-50.jpg"
+      },
+      {
+        "code": "bronze-60",
+        "name": "Bronze 60",
+        "color": "#895f43",
+        "image": "assets/img/swatches/brushed-bronze-60.jpg"
+      },
+      {
+        "code": "bronze-70",
+        "name": "Bronze 70",
+        "color": "#64473b",
+        "image": "assets/img/swatches/brushed-bronze-70.jpg"
+      },
+      {
+        "code": "copper-30",
+        "name": "Copper 30",
+        "color": "#c68f72",
+        "image": "assets/img/swatches/brushed-copper-30.jpg"
+      },
+      {
+        "code": "rosegoldcu30g30",
+        "name": "Rose gold Cu30 G30",
+        "color": "#d6a87e",
+        "image": "assets/img/swatches/brushed-rosegoldcu30g30.jpg"
+      },
+      {
+        "code": "rosegoldcu50g30",
+        "name": "Rose gold Cu50 G30",
+        "color": "#b27356",
+        "image": "assets/img/swatches/brushed-rosegoldcu50g30.jpg"
+      }
+    ],
+    "bright": [
+      {
+        "code": "natural",
+        "name": "Natural",
+        "color": "#c4c0b7",
+        "image": "assets/img/swatches/bright-natural.jpg"
+      },
+      {
+        "code": "bronze-10",
+        "name": "Bronze 10",
+        "color": "#d2cbb9",
+        "image": "assets/img/swatches/bright-bronze-10.jpg"
+      },
+      {
+        "code": "bronze-20",
+        "name": "Bronze 20",
+        "color": "#e4ddc9",
+        "image": "assets/img/swatches/bright-bronze-20.jpg"
+      },
+      {
+        "code": "bronze-30",
+        "name": "Bronze 30",
+        "color": "#544d45",
+        "image": "assets/img/swatches/bright-bronze-30.jpg"
+      },
+      {
+        "code": "bronze-40",
+        "name": "Bronze 40",
+        "color": "#cdbc8a",
+        "image": "assets/img/swatches/bright-bronze-40.jpg"
+      },
+      {
+        "code": "bronze-50",
+        "name": "Bronze 50",
+        "color": "#88653b",
+        "image": "assets/img/swatches/bright-bronze-50.jpg"
+      },
+      {
+        "code": "bronze-60",
+        "name": "Bronze 60",
+        "color": "#6d4b2e",
+        "image": "assets/img/swatches/bright-bronze-60.jpg"
+      },
+      {
+        "code": "bronze-85",
+        "name": "Bronze 85",
+        "color": "#1f1e1d",
+        "image": "assets/img/swatches/bright-bronze-85.jpg"
+      },
+      {
+        "code": "copper-30",
+        "name": "Copper 30",
+        "color": "#ac7863",
+        "image": "assets/img/swatches/bright-copper-30.jpg"
+      },
+      {
+        "code": "copper-50",
+        "name": "Copper 50",
+        "color": "#8f5040",
+        "image": "assets/img/swatches/bright-copper-50.jpg"
+      },
+      {
+        "code": "rosegoldcu30g30",
+        "name": "Rose gold Cu30 G30",
+        "color": "#cea177",
+        "image": "assets/img/swatches/bright-rosegoldcu30g30.jpg"
+      },
+      {
+        "code": "rosegoldcu50g30",
+        "name": "Rose gold Cu50 G30",
+        "color": "#ab602e",
+        "image": "assets/img/swatches/bright-rosegoldcu50g30.jpg"
+      }
+    ]
+  }
+}
