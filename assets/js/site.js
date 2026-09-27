@@ -56,17 +56,12 @@
     window.addEventListener('hashchange', () => { if (fromHash()) select(fromHash()); });
     box.querySelectorAll('.tab-panel').forEach((panel) => {
       const preview = panel.querySelector('.tab-finish > img');
-      const selection = panel.querySelector('.sample-selection');
       const finish = panel.querySelector('h3').textContent;
       panel.querySelectorAll('[data-sample]').forEach((button) => {
         button.addEventListener('click', () => {
           panel.querySelectorAll('[data-sample]').forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
           preview.src = button.dataset.sample;
-          preview.alt = finish + ' aluminium sample: ' + button.dataset.name;
-          selection.textContent = button.dataset.name;
-          const request = panel.querySelector('.sample-request');
-          request.textContent = 'Ask for this sample';
-          request.href = 'mailto:info@overland-ocm.it?subject=' + encodeURIComponent(finish + ' - ' + button.dataset.name + ' sample request');
+          preview.alt = finish + ' aluminium sample';
         });
       });
     });

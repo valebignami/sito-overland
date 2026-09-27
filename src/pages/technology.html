@@ -9,13 +9,15 @@
 <!-- include:header -->
 
   <main id="main">
-    <section class="intro" aria-labelledby="page-title">
-      <div class="wrap intro-grid">
-        <h1 id="page-title">Continuous<br>coil anodizing.</h1>
-        <p class="lede">Anodizing is an electrochemical process that grows a hard, protective oxide layer on aluminium. The layer is part of the metal itself, not a coating on top of it.</p>
+    <section class="page-hero" aria-labelledby="page-title">
+      <img class="page-hero-img" src="assets/img/site/tech-coils-line.jpg" alt="Aluminium coils on the production floor" width="1600" height="900">
+      <div class="wrap">
+        <div class="page-hero-card">
+          <h1 id="page-title">Continuous<br>coil anodizing.</h1>
+          <p class="lede">Anodizing is an electrochemical process that grows a hard, protective oxide layer on aluminium. The layer is part of the metal itself, not a coating on top of it.</p>
+        </div>
       </div>
     </section>
-    <figure class="band"><img src="assets/img/site/tech-coils-line.jpg" alt="Aluminium coils on the production floor" width="1600" height="900"></figure>
 
     <section class="section stone" aria-labelledby="process-title">
       <div class="wrap">
@@ -43,39 +45,48 @@
           <h2 id="compare-title">Coil or batch.</h2>
           <p>Both methods anodize aluminium. The difference is how the metal travels through the baths, and it shows in the surface you receive.</p>
         </div>
-        <div class="compare-wrap">
-          <table class="compare">
-            <caption class="skip">Continuous coil anodizing compared with batch anodizing</caption>
-            <thead>
-              <tr>
-                <th scope="col"><span class="skip">Aspect</span></th>
-                <th scope="col" class="col-coil">
-                  <div class="method-head">
-                    <svg class="method-diagram" viewBox="0 0 480 160" aria-hidden="true"><g class="diagram-tanks"><path d="M90 70v54h48V70m24 0v54h48V70m24 0v54h48V70m24 0v54h48V70m24 0v54h48V70"/></g><g class="diagram-coils"><circle cx="36" cy="52" r="24"/><circle cx="36" cy="52" r="12"/><circle cx="444" cy="52" r="24"/><circle cx="444" cy="52" r="12"/></g><path class="diagram-strip" d="M36 28H78l36 72 36-72 36 72 36-72 36 72 36-72 36 72 36-72 36 72 36-72h6"/></svg>
-                    <strong>Continuous coil</strong>
-                    <span>How Overland works</span>
-                    <p class="method-how">The whole coil moves through all baths on one line.</p>
-                  </div>
-                </th>
-                <th scope="col">
-                  <div class="method-head">
-                    <svg class="method-diagram" viewBox="0 0 480 160" aria-hidden="true"><path class="diagram-tanks" d="M68 70v58h344V70"/><path class="diagram-rack" d="M100 28h280m-224 0v26m84-26v26m84-26v26"/><g class="diagram-parts"><path d="M134 54h44v52h-44zm84 0h44v52h-44zm84 0h44v52h-44z"/></g></svg>
-                    <strong>Batch</strong>
-                    <span>Parts dipped tank by tank</span>
-                    <p class="method-how">Parts or sheets hang from racks and are dipped tank by tank.</p>
-                  </div>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="row-how"><th scope="row">How it runs</th><td class="col-coil" data-label="Coil">The whole coil moves through all baths on one line.</td><td data-label="Batch">Parts or sheets hang from racks and are dipped tank by tank.</td></tr>
-              <tr><th scope="row">Surface</th><td class="col-coil" data-label="Coil">No contact or hanging marks.</td><td data-label="Batch">Contact points where the rack holds the part.</td></tr>
-              <tr><th scope="row">Colour</th><td class="col-coil" data-label="Coil">Consistent along the coil and between runs.</td><td data-label="Batch">Can vary from one batch to the next.</td></tr>
-              <tr><th scope="row">Format</th><td class="col-coil" data-label="Coil">Coils, sheets and strips, ready for fabrication.</td><td data-label="Batch">Finished parts and profiles.</td></tr>
-              <tr><th scope="row">Resources</th><td class="col-coil" data-label="Coil">Fewer chemicals, less water and energy, less waste.</td><td data-label="Batch">More chemicals, water and energy for the same result.</td></tr>
-              <tr><th scope="row">Cost</th><td class="col-coil" data-label="Coil">An efficient line keeps production costs down, and customers see it in the price.</td><td data-label="Batch">Racking and handling each batch add to production costs.</td></tr>
-            </tbody>
-          </table>
+        <div class="vs">
+          <div class="vs-spacer"></div>
+          <div class="vs-head vs-head--coil">
+            <h3>Continuous coil</h3>
+            <p class="vs-tag">How Overland works</p>
+            <p class="vs-how">The whole coil moves through all baths on one line.</p>
+            <svg class="lane-svg" viewBox="0 0 1200 160" role="img" aria-label="The coil unwinds, runs through five baths in one continuous strip and is rewound">
+  <path class="lane-tanks" d="M190 58V128H330V58M370 58V128H510V58M550 58V128H690V58M730 58V128H870V58M910 58V128H1050V58"/>
+  <path class="lane-strip" d="M50 18H190L260 112L330 18H370L440 112L510 18H550L620 112L690 18H730L800 112L870 18H910L980 112L1050 18H1150"/>
+  <circle class="lane-coil" cx="50" cy="52" r="34"/><circle class="lane-coil" cx="50" cy="52" r="13"/>
+  <circle class="lane-coil" cx="1150" cy="52" r="34"/><circle class="lane-coil" cx="1150" cy="52" r="13"/>
+  <g class="lane-text"><text x="260" y="152" text-anchor="middle">Cleaning</text><text x="440" y="152" text-anchor="middle">Etching</text><text x="620" y="152" text-anchor="middle">Anodizing</text><text x="800" y="152" text-anchor="middle">Colouring</text><text x="980" y="152" text-anchor="middle">Sealing</text></g>
+</svg>
+          </div>
+          <div class="vs-head vs-head--batch">
+            <h3>Batch</h3>
+            <p class="vs-how">Parts or sheets hang from racks and are dipped tank by tank.</p>
+            <svg class="lane-svg" viewBox="0 0 1200 160" role="img" aria-label="Parts hang from a rack and are lowered into one tank, then lifted and moved to the next">
+  <path class="lane-tanks" d="M190 58V128H330V58M370 58V128H510V58M550 58V128H690V58M730 58V128H870V58M910 58V128H1050V58"/>
+  <path class="lane-rail" d="M150 14H1050"/>
+  <g class="lane-parts"><path d="M400 14V40"/><rect x="388" y="40" width="24" height="62"/><path d="M430 14V40"/><rect x="418" y="40" width="24" height="62"/><path d="M460 14V40"/><rect x="448" y="40" width="24" height="62"/></g>
+  <path class="lane-move" d="M490 30C530 -6 600 -6 640 30"/>
+  <path class="lane-move" d="M670 30C710 -6 780 -6 820 30"/>
+  <path class="lane-move" d="M850 30C890 -6 960 -6 1000 30"/>
+  <g class="lane-text"><text x="260" y="152" text-anchor="middle">Cleaning</text><text x="440" y="152" text-anchor="middle">Etching</text><text x="620" y="152" text-anchor="middle">Anodizing</text><text x="800" y="152" text-anchor="middle">Colouring</text><text x="980" y="152" text-anchor="middle">Sealing</text></g>
+</svg>
+          </div>
+          <div class="vs-label">Surface</div>
+          <p class="vs-cell vs-cell--coil"><span>Coil: </span>No contact or hanging marks.</p>
+          <p class="vs-cell vs-cell--batch"><span>Batch: </span>Contact points where the rack holds the part.</p>
+          <div class="vs-label">Colour</div>
+          <p class="vs-cell vs-cell--coil"><span>Coil: </span>Consistent along the coil and between runs.</p>
+          <p class="vs-cell vs-cell--batch"><span>Batch: </span>Can vary from one batch to the next.</p>
+          <div class="vs-label">Format</div>
+          <p class="vs-cell vs-cell--coil"><span>Coil: </span>Coils, sheets and strips, ready for fabrication.</p>
+          <p class="vs-cell vs-cell--batch"><span>Batch: </span>Finished parts and profiles.</p>
+          <div class="vs-label">Resources</div>
+          <p class="vs-cell vs-cell--coil"><span>Coil: </span>Fewer chemicals, less water and energy, less waste.</p>
+          <p class="vs-cell vs-cell--batch"><span>Batch: </span>More chemicals, water and energy for the same result.</p>
+          <div class="vs-label">Cost</div>
+          <p class="vs-cell vs-cell--coil"><span>Coil: </span>An efficient line keeps production costs down, and customers see it in the price.</p>
+          <p class="vs-cell vs-cell--batch"><span>Batch: </span>Racking and handling each batch add to production costs.</p>
         </div>
       </div>
     </section>
