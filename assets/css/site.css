@@ -276,7 +276,9 @@ p:last-child { margin-bottom: 0; }
 .use { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); grid-template-areas: "title pair" "text pair"; column-gap: clamp(32px, 5vw, 80px); padding-block: clamp(20px, 2.2vw, 32px); border-top: 1px solid var(--line); }
 .use:nth-child(even) { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); grid-template-areas: "pair title" "pair text"; }
 .use-pair { grid-area: pair; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
-.use-pair img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--radius); }
+.use-photo { display: block; overflow: hidden; border-radius: var(--radius); }
+.use-pair img { width: 100%; aspect-ratio: 1; object-fit: cover; transition: transform 700ms cubic-bezier(.2, .7, .2, 1); }
+.use-photo:hover img { transform: scale(1.06); }
 .use h3 { grid-area: title; align-self: end; margin: 0 0 14px; font-size: clamp(1.6rem, 2.2vw, 2.1rem); }
 .use p { grid-area: text; align-self: start; max-width: 40ch; font-size: 1.05rem; color: var(--muted); line-height: 1.6; }
 
@@ -402,6 +404,12 @@ p:last-child { margin-bottom: 0; }
   .footer-bottom { flex-direction: column; align-items: flex-start; }
 }
 .head--top { align-items: start; }
+/* Statement heading across the page, the text below in two columns. */
+.head--stack { display: block; }
+.head--stack h2 { max-width: 18ch; margin-bottom: clamp(24px, 3vw, 40px); font-size: clamp(2.4rem, 4.2vw, 4rem); }
+.head--stack > div { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px 64px; }
+.head--stack p { max-width: 52ch; }
+@media (max-width: 700px) { .head--stack > div { grid-template-columns: 1fr; } }
 .split figure.natural img { aspect-ratio: auto; }
 
 /* Laptops with Windows display scaling (125-175%) give the page a short window, about 1100 x 580.
