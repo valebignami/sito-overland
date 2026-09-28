@@ -91,6 +91,8 @@ p:last-child { margin-bottom: 0; }
 .hero-statement .btn-white:focus-visible { outline-color: white; }
 .hero-film { position: relative; background: var(--graphite); }
 .hero-film video { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+/* Variant: the film opens the page at full screen height, the red band follows it. */
+.home-hero--film-first .hero-film video { aspect-ratio: auto; height: calc(100svh - 81px - 128px); min-height: 420px; }
 .video-toggle { position: absolute; right: var(--gutter); bottom: 24px; min-height: 44px; padding: 10px 18px; border: 1px solid rgb(255 255 255 / .8); color: white; background: rgb(30 34 32 / .7); font-size: .95rem; }
 .video-toggle:hover { background: var(--red); border-color: var(--red); }
 
@@ -324,7 +326,7 @@ p:last-child { margin-bottom: 0; }
 }
 
 /* Tablet */
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
   .contact-layout { grid-template-columns: 1fr; }
   .contact-card { order: -1; }
   .props-layout { grid-template-columns: 1fr; }
@@ -372,6 +374,7 @@ p:last-child { margin-bottom: 0; }
   h1 { font-size: clamp(2.6rem, 11vw, 3.4rem); }
   h2 { font-size: clamp(2.1rem, 9vw, 2.6rem); }
   .hero-statement h1 { font-size: clamp(2.4rem, 10vw, 3rem); }
+  .home-hero--film-first .hero-film video { aspect-ratio: 16 / 9; height: auto; min-height: 0; }
   .video-toggle { bottom: 12px; min-height: 40px; padding: 8px 14px; font-size: .9rem; }
   .apps-copy { padding-block: 48px; }
   .sector-links a { font-size: 1.45rem; }
@@ -407,3 +410,21 @@ p:last-child { margin-bottom: 0; }
 }
 .head--top { align-items: start; }
 .split figure.natural img { aspect-ratio: auto; }
+
+/* Laptops with Windows display scaling (125-175%) give the page a short window, about 1100 x 580.
+   Heights and type follow the window height there, so the first screen shows more than one block. */
+@media (min-width: 900px) and (max-height: 760px) {
+  :root { --section: clamp(56px, 6.5vw, 96px); }
+  .header-row { min-height: 64px; }
+  .brand img { width: 118px; }
+  html { scroll-padding-top: 80px; }
+  h1 { font-size: clamp(2.6rem, 4.6vw, 4.4rem); }
+  h2 { font-size: clamp(2rem, 3vw, 3rem); }
+  .hero-statement .wrap { padding-block: 28px; }
+  .hero-statement h1 { font-size: clamp(2.4rem, 4vw, 3.6rem); }
+  .home-hero--film-first .hero-film video { height: calc(100svh - 64px - 112px); min-height: 300px; }
+  .page-hero { min-height: clamp(340px, 62vh, 620px); padding-block: 40px; }
+  .sector-hero > img { aspect-ratio: auto; height: clamp(300px, 64vh, 470px); }
+  .sector-index img { aspect-ratio: 3 / 2; }
+  .map, .map iframe { min-height: clamp(340px, 64vh, 460px); }
+}
