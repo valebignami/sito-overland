@@ -98,14 +98,9 @@ p:last-child { margin-bottom: 0; }
 
 /* Home blocks */
 .finish-names { display: flex; flex-wrap: wrap; gap: 10px 28px; margin: 28px 0 0; padding: 20px 0 0; list-style: none; border-top: 1px solid var(--line); font: 500 2rem/1 var(--font-display); }
-.apps-feature { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); background: var(--graphite); color: var(--paper); }
-.apps-feature figure img { width: 100%; height: 100%; min-height: 560px; object-fit: cover; }
-.apps-copy { padding: clamp(48px, 6vw, 96px) var(--gutter); align-self: center; max-width: 720px; }
-.apps-copy h2 { margin-bottom: 20px; }
-.apps-copy p { color: #c9ccc7; }
-.sector-links { margin-top: 36px; border-bottom: 1px solid #4a504c; }
-.sector-links a { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 60px; border-top: 1px solid #4a504c; font: 500 1.7rem/1.1 var(--font-display); text-decoration: none; }
-.sector-links a:hover { color: #ff6b6f; }
+.sector-links { margin-top: 28px; border-bottom: 1px solid var(--line); }
+.sector-links a { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 50px; border-top: 1px solid var(--line); font: 500 1.35rem/1.1 var(--font-display); text-decoration: none; }
+.sector-links a:hover { color: var(--red); }
 .sector-links a:hover svg { transform: translate(3px, -3px); }
 .sector-links svg { transition: transform 160ms; }
 
@@ -357,8 +352,6 @@ p:last-child { margin-bottom: 0; }
   .head, .intro-grid, .spec-layout .head { grid-template-columns: 1fr; }
   .split, .split--flip { grid-template-columns: 1fr; }
   .split--flip > figure { order: 0; }
-  .apps-feature { grid-template-columns: 1fr; }
-  .apps-feature figure img { min-height: 0; aspect-ratio: 4 / 3; }
   .page-hero { min-height: 480px; align-items: flex-end; }
   .page-hero::before { background: linear-gradient(0deg, rgb(12 14 13 / .82) 0%, rgb(12 14 13 / .55) 60%, rgb(12 14 13 / .25) 100%); }
   .mosaic { grid-template-columns: 1fr 1fr; }
@@ -376,8 +369,7 @@ p:last-child { margin-bottom: 0; }
   .hero-statement h1 { font-size: clamp(2.4rem, 10vw, 3rem); }
   .home-hero--film-first .hero-film video { aspect-ratio: 16 / 9; height: auto; min-height: 0; }
   .video-toggle { bottom: 12px; min-height: 40px; padding: 8px 14px; font-size: .9rem; }
-  .apps-copy { padding-block: 48px; }
-  .sector-links a { font-size: 1.45rem; }
+  .sector-links a { font-size: 1.25rem; }
   .facts-band { grid-template-columns: 1fr 1fr; }
   .facts-band div, .facts-band div + div { padding: 20px 16px 20px 0; border-left: 0; border-bottom: 1px solid var(--line); }
   .facts-band div:nth-child(even) { padding-left: 16px; border-left: 1px solid var(--line); }
