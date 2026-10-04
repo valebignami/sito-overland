@@ -181,10 +181,9 @@ p:last-child { margin-bottom: 0; }
 .cb-head p:last-child { margin-top: auto; padding-top: 10px; }
 .cb-head h3 { font-size: clamp(1.9rem, 2.6vw, 2.5rem); line-height: 1; }
 .cb-head p { margin: 0; max-width: 36ch; font-size: 1rem; line-height: 1.5; color: var(--muted); }
-.cb-head .cb-tag { margin-top: 6px; font-size: 1rem; font-weight: 600; }
 .cb-label { margin: 0; padding: 22px 0; border-bottom: 1px solid var(--line); font: 500 clamp(1.3rem, 1.7vw, 1.6rem)/1.15 var(--font-display); }
 .cb-cell { margin: 0; padding: 20px 0 22px; border-bottom: 1px solid var(--line); font-size: 1.05rem; line-height: 1.5; }
-.cb-cell > svg { display: block; width: 100%; max-width: 360px; height: auto; margin-bottom: 10px; }
+.cb-cell > svg { display: block; width: 100%; max-width: 480px; height: auto; margin-bottom: 12px; }
 .cb-silver { fill: url(#cb-silver); }
 .cb-gold-l { fill: url(#cb-gold-l); }
 .cb-gold-m { fill: url(#cb-gold-m); }
