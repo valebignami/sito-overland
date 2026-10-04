@@ -438,3 +438,12 @@ p:last-child { margin-bottom: 0; }
   .sector-index img { aspect-ratio: 3 / 2; }
   .map, .map iframe { min-height: clamp(340px, 64vh, 460px); }
 }
+.head--last { margin-bottom: 0; }
+
+/* Company: sustainability cards */
+.res-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.res-cards article { background: var(--paper); border-top: 3px solid var(--ink); border-radius: var(--radius); padding: 24px 24px 28px; }
+.res-cards small { display: block; margin-bottom: 18px; font: 500 1.1rem/1 var(--font-display); color: var(--red); }
+.res-cards h3 { margin-bottom: 10px; font-size: 1.55rem; }
+.res-cards p { color: var(--muted); font-size: 1rem; line-height: 1.5; }
+@media (max-width: 899px) { .res-cards { grid-template-columns: 1fr; gap: 12px; } }
