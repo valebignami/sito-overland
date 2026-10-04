@@ -206,7 +206,7 @@ p:last-child { margin-bottom: 0; }
 .props h3 { margin-bottom: 10px; font-size: 1.55rem; }
 .props p { color: var(--muted); font-size: 1rem; line-height: 1.5; }
 .tablist { display: none; }
-.finish-tabs.is-enhanced .tablist { display: flex; gap: 8px; margin-bottom: 36px; }
+.finish-tabs.is-enhanced .tablist { display: flex; gap: 8px; margin-bottom: 24px; }
 /* Finish tabs and the finish card sit on the page as white, softly shadowed pieces, rounded like the photos. */
 .tab { min-height: 46px; padding: 6px 24px; border: 1px solid #d3d6d0; border-radius: var(--radius); background: #fff; box-shadow: 0 1px 2px rgb(30 34 32 / .06), 0 6px 16px rgb(30 34 32 / .08); font: 500 1.4rem/1 var(--font-display); transition: box-shadow 160ms, border-color 160ms; }
 .tab:hover { border-color: var(--ink); box-shadow: 0 1px 2px rgb(30 34 32 / .08), 0 10px 22px rgb(30 34 32 / .12); }
@@ -217,8 +217,8 @@ p:last-child { margin-bottom: 0; }
 .tab-panel:focus-visible { outline-offset: 8px; }
 .tab-finish { position: sticky; top: 104px; background: #fff; border: 1px solid #d3d6d0; border-radius: var(--radius); overflow: hidden; box-shadow: 0 1px 3px rgb(30 34 32 / .06), 0 14px 36px rgb(30 34 32 / .12); }
 .tab-finish > img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; object-position: 50% 0; border-bottom: 1px solid var(--line); }
-.tab-finish figcaption { padding: 22px 24px 24px; }
-.tab-finish h3 { font-size: 2.1rem; margin-bottom: 4px; }
+.tab-finish figcaption { padding: 16px 22px 20px; }
+.tab-finish h3 { font-size: 1.7rem; margin-bottom: 4px; }
 .tab-finish p { font-size: 1rem; color: var(--muted); }
 .chart-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px 16px; margin: 0; padding: 0; list-style: none; }
 .swatch-button { display: block; width: 100%; padding: 0; text-align: left; border: 0; background: none; }
@@ -337,7 +337,9 @@ p:last-child { margin-bottom: 0; }
   .nav-toggle-bars { display: block; width: 22px; height: 10px; border-block: 1.5px solid currentColor; }
   .site-nav { width: 100%; flex-direction: column; align-items: stretch; gap: 0; padding-bottom: 20px; }
   .site-nav a { min-height: 52px; border-bottom: 1px solid var(--line); }
-  .site-nav .nav-contact { justify-content: space-between; margin-top: 16px; border-bottom: 0; }
+  /* Phone menu: Contact sits in the list like the other items, marked in red text instead of a red block. */
+  .site-nav .nav-contact, .site-nav .nav-contact:hover, .site-nav .nav-contact[aria-current="page"] { justify-content: space-between; padding-inline: 0; background: none; color: var(--red); font-weight: 600; border-bottom: 1px solid var(--line); }
+  .site-nav .nav-contact[aria-current="page"] { text-decoration: underline; text-decoration-color: var(--red); text-decoration-thickness: 2px; text-underline-offset: 10px; }
   .nav-enhanced .site-nav { display: none; }
   .nav-enhanced .site-nav.is-open { display: flex; max-height: calc(100dvh - 72px); overflow-y: auto; }
   .line-hint { display: block; }
@@ -390,10 +392,12 @@ p:last-child { margin-bottom: 0; }
   .props div:nth-child(even) { padding: 16px 0 16px 12px; }
   .props h3 { margin-bottom: 6px; font-size: 1.25rem; }
   .props p { font-size: .95rem; line-height: 1.45; }
-  .finish-tabs.is-enhanced .tablist { gap: 6px; }
+  .finish-tabs.is-enhanced .tablist { gap: 6px; margin-bottom: 16px; }
   .tab { flex: 1; min-height: 42px; padding-inline: 8px; font-size: 1.2rem; }
   .tab-finish { grid-template-columns: 1fr; }
-  .tab-finish > img { aspect-ratio: 3 / 2; }
+  .tab-finish > img { aspect-ratio: 16 / 9; }
+  .tab-finish figcaption { padding: 14px 18px 16px; }
+  .tab-finish h3 { font-size: 1.5rem; margin-bottom: 2px; }
   .chart-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px 12px; }
   .spec-pair { grid-template-columns: 1fr; gap: 32px; }
   .spec-table th { width: 42%; }
