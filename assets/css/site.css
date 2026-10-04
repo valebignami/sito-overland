@@ -139,13 +139,13 @@ p:last-child { margin-bottom: 0; }
 .line-figure { background: var(--paper); padding: clamp(20px, 3vw, 44px); border-radius: var(--radius); }
 .line-scroll { overflow-x: auto; }
 .line-svg { display: block; width: 100%; min-width: 760px; height: auto; }
-.line-svg .shadow { fill: #000; opacity: .14; filter: url(#ls-blur); }
+.line-svg .shadow, .cb-shadow { fill: #000; opacity: .14; filter: url(#ls-blur); }
 .line-svg .bath { fill: url(#ls-tank); stroke: var(--line); stroke-width: 1.5; }
 .line-svg .liquid { fill: url(#ls-liquid); }
 .line-svg .key .bath { stroke: var(--red); }
 .line-svg .key .liquid { fill: url(#ls-liquid-key); }
-.line-svg .roll { fill: url(#ls-roll); }
-.line-svg .rings { fill: none; stroke: #fff; stroke-opacity: .7; stroke-width: 1.2; }
+.line-svg .roll, .cb-silver-roll { fill: url(#ls-roll); }
+.line-svg .rings, .cb-rings { fill: none; stroke: #fff; stroke-opacity: .7; stroke-width: 1.2; }
 .line-svg .hub { fill: #fff; }
 .line-svg .axle { fill: var(--ink); }
 .line-svg .turn { fill: none; stroke: #7a807b; stroke-width: 1.5; stroke-linecap: round; }
@@ -173,34 +173,23 @@ p:last-child { margin-bottom: 0; }
 /* Technology: coil or batch. Each difference is drawn as the surface you receive, in soft satin metal;
    both methods are styled alike, so neither reads as the right or wrong answer. */
 .cb { display: grid; grid-template-columns: minmax(110px, .4fr) minmax(0, 1fr) minmax(0, 1fr); column-gap: clamp(12px, 1.6vw, 20px); margin-top: clamp(32px, 4vw, 56px); }
-.cb-head { padding: 0 0 20px; border-bottom: 2px solid var(--ink); }
+.cb-head { display: flex; flex-direction: column; padding: 0 0 20px; border-bottom: 2px solid var(--ink); }
+.cb-head p:last-child { margin-top: auto; padding-top: 10px; }
 .cb-head h3 { font-size: clamp(1.9rem, 2.6vw, 2.5rem); line-height: 1; }
-.cb-head p { margin: 10px 0 0; max-width: 36ch; font-size: 1rem; line-height: 1.5; color: var(--muted); }
+.cb-head p { margin: 0; max-width: 36ch; font-size: 1rem; line-height: 1.5; color: var(--muted); }
 .cb-head .cb-tag { margin-top: 6px; font-size: .95rem; font-weight: 600; }
 .cb-label { margin: 0; padding: 22px 0; border-bottom: 1px solid var(--line); font: 500 clamp(1.3rem, 1.7vw, 1.6rem)/1.15 var(--font-display); }
 .cb-cell { margin: 0; padding: 20px 0 22px; border-bottom: 1px solid var(--line); font-size: 1.05rem; line-height: 1.5; }
 .cb-cell > svg { display: block; width: 100%; max-width: 360px; height: auto; margin-bottom: 10px; }
 .cb-silver { fill: url(#cb-silver); }
-.cb-silver-roll { fill: url(#cb-silver-roll); }
 .cb-gold-l { fill: url(#cb-gold-l); }
 .cb-gold-m { fill: url(#cb-gold-m); }
 .cb-gold-d { fill: url(#cb-gold-d); }
 .cb-gold-roll { fill: url(#cb-gold-roll); }
-.cb-shadow { fill: #000; opacity: .16; filter: url(#cb-blur); }
-.cb-rings { fill: none; stroke: #fff; stroke-opacity: .65; stroke-width: 1; }
 .cb-core { fill: var(--paper); }
 .cb-rail { fill: none; stroke: #7a807b; stroke-width: 2; stroke-linecap: round; }
 .cb-mark { fill: var(--ink); }
 .cb-halo { fill: var(--ink); opacity: .12; }
-@media (max-width: 700px) {
-  .cb { grid-template-columns: 1fr 1fr; column-gap: 14px; }
-  .cb-corner { display: none; }
-  .cb-head { padding-bottom: 14px; }
-  .cb-head h3 { font-size: 1.6rem; }
-  .cb-head p:not(.cb-tag) { display: none; }
-  .cb-label { grid-column: 1 / -1; padding: 18px 0 0; border-bottom: 0; }
-  .cb-cell { padding: 10px 0 18px; font-size: .95rem; }
-}
 
 /* Products */
 .props-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr); gap: clamp(40px, 6vw, 96px); align-items: start; }
@@ -371,6 +360,13 @@ p:last-child { margin-bottom: 0; }
   .steps li, .steps li + li, .steps li:nth-child(4) { padding: 18px 0 20px; display: grid; grid-template-columns: 44px minmax(0, 1fr); column-gap: 8px; border-top-width: 1px; }
   .steps .is-key { border-top-width: 2px; margin: 0 -12px; padding: 18px 12px 20px; }
   .steps li::before { grid-row: span 2; margin: 4px 0 0; }
+  .cb { grid-template-columns: 1fr 1fr; column-gap: 14px; }
+  .cb-corner { display: none; }
+  .cb-head { padding-bottom: 14px; }
+  .cb-head h3 { font-size: 1.6rem; }
+  .cb-head p { font-size: .9rem; }
+  .cb-label { grid-column: 1 / -1; padding: 18px 0 0; border-bottom: 0; }
+  .cb-cell { padding: 10px 0 18px; font-size: .95rem; }
   .props-intro { grid-template-columns: 1fr; }
   .props-intro figure { grid-column: auto; grid-row: auto; margin-top: 28px; }
   .props { grid-template-columns: 1fr; }

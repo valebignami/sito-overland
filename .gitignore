@@ -1,3 +1,5 @@
 public/
 _src/
 node_modules/
+.codex-tmp/
+.ui-review/
