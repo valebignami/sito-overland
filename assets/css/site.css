@@ -388,9 +388,11 @@ p:last-child { margin-bottom: 0; }
   .use-pair { gap: 6px; }
   .map, .map iframe { min-height: 340px; }
   .line-figure { padding: 16px 12px; }
+  /* Phone: the menu is already in the header, so the footer keeps two short lines: logo and copyright, then email and phone. */
   .footer-row { gap: 0 20px; }
-  .footer-row nav { width: 100%; display: grid; grid-template-columns: repeat(3, auto); justify-content: start; column-gap: 24px; }
-  .footer-contact { margin-left: 0; }
+  .footer-row nav { display: none; }
+  .footer-copy { order: 1; margin-left: auto; font-size: .85rem; }
+  .footer-contact { order: 2; width: 100%; margin-left: 0; justify-content: space-between; }
   .contact-list a { display: inline-block; padding-block: 8px; }
 }
 .head--top { align-items: start; }
