@@ -208,7 +208,7 @@ p:last-child { margin-bottom: 0; }
 .tablist { display: none; }
 .finish-tabs.is-enhanced .tablist { display: flex; gap: 8px; margin-bottom: 36px; }
 /* Finish tabs and the finish card sit on the page as white, softly shadowed pieces, rounded like the photos. */
-.tab { min-height: 56px; padding: 10px 28px; border: 1px solid #d3d6d0; border-radius: var(--radius); background: #fff; box-shadow: 0 1px 2px rgb(30 34 32 / .06), 0 6px 16px rgb(30 34 32 / .08); font: 500 1.7rem/1 var(--font-display); transition: box-shadow 160ms, border-color 160ms; }
+.tab { min-height: 46px; padding: 6px 24px; border: 1px solid #d3d6d0; border-radius: var(--radius); background: #fff; box-shadow: 0 1px 2px rgb(30 34 32 / .06), 0 6px 16px rgb(30 34 32 / .08); font: 500 1.4rem/1 var(--font-display); transition: box-shadow 160ms, border-color 160ms; }
 .tab:hover { border-color: var(--ink); box-shadow: 0 1px 2px rgb(30 34 32 / .08), 0 10px 22px rgb(30 34 32 / .12); }
 .tab[aria-selected="true"] { background: var(--ink); border-color: var(--ink); color: white; box-shadow: 0 1px 2px rgb(30 34 32 / .12), 0 8px 20px rgb(30 34 32 / .18); }
 .tab-panel { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: clamp(28px, 4vw, 56px); align-items: start; }
@@ -391,7 +391,7 @@ p:last-child { margin-bottom: 0; }
   .props h3 { margin-bottom: 6px; font-size: 1.25rem; }
   .props p { font-size: .95rem; line-height: 1.45; }
   .finish-tabs.is-enhanced .tablist { gap: 6px; }
-  .tab { flex: 1; padding-inline: 8px; font-size: 1.4rem; }
+  .tab { flex: 1; min-height: 42px; padding-inline: 8px; font-size: 1.2rem; }
   .tab-finish { grid-template-columns: 1fr; }
   .tab-finish > img { aspect-ratio: 16 / 9; }
   .chart-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px 10px; }
