@@ -160,6 +160,8 @@ p:last-child { margin-bottom: 0; }
 .line-svg .phases text { font-size: 13px; letter-spacing: .08em; }
 .line-svg .key text, .line-svg text.key { fill: var(--red); }
 .line-caption { margin: 16px 0 0; font-size: 1rem; color: var(--muted); }
+/* On narrower screens the diagram keeps its size and scrolls sideways; this line says so. */
+.line-hint { display: none; margin: 0 0 10px; font-size: .9rem; color: var(--muted); }
 /* The step list supports the diagram: small names, little space. */
 .steps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; margin: 24px 0 0; padding: 0; list-style: none; counter-reset: step; }
 .steps li { counter-increment: step; padding: 14px 18px 0 0; border-top: 2px solid var(--ink); }
@@ -330,8 +332,7 @@ p:last-child { margin-bottom: 0; }
   .site-nav .nav-contact { justify-content: space-between; margin-top: 16px; border-bottom: 0; }
   .nav-enhanced .site-nav { display: none; }
   .nav-enhanced .site-nav.is-open { display: flex; max-height: calc(100dvh - 72px); overflow-y: auto; }
-  .line-svg { min-width: 0; }
-  .line-svg .labels, .line-svg .phases { display: none; }
+  .line-hint { display: block; }
   .hero-statement .wrap { flex-direction: column; align-items: flex-start; }
   .head, .intro-grid, .spec-layout .head { grid-template-columns: 1fr; }
   .split, .split--flip { grid-template-columns: 1fr; }
