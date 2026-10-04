@@ -4,6 +4,7 @@
 // Output goes to public/, together with a copy of assets/.
 import { readFileSync, writeFileSync, readdirSync, mkdirSync, rmSync, cpSync } from 'node:fs';
 import { join, basename } from 'node:path';
+import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 
 const root = join(fileURLToPath(new URL('.', import.meta.url)), '..');
@@ -51,12 +52,17 @@ rmSync(out, { recursive: true, force: true });
 mkdirSync(out, { recursive: true });
 cpSync(join(root, 'assets'), join(out, 'assets'), { recursive: true });
 
+// Stylesheet and script get a content hash in their URL, so browsers fetch the new file after each publish
+const version = (path) => createHash('sha1').update(readFileSync(join(root, path))).digest('hex').slice(0, 8);
+const versioned = { 'assets/css/site.css': version('assets/css/site.css'), 'assets/js/site.js': version('assets/js/site.js') };
+
 for (const file of readdirSync(join(root, 'src/pages')).filter((f) => f.endsWith('.html'))) {
   const page = basename(file, '.html');
   let html = readFileSync(join(root, 'src/pages', file), 'utf8');
   html = html.replace(/<!-- include:([\w-]+) -->/g, (_, name) => partial(name));
   // Mark the current page in the navigation
   html = html.replace(new RegExp(`data-page="${page}"`, 'g'), `data-page="${page}" aria-current="page"`);
+  for (const [path, v] of Object.entries(versioned)) html = html.split(`"${path}"`).join(`"${path}?v=${v}"`);
   writeFileSync(join(out, file), html);
   console.log('built', file);
 }
