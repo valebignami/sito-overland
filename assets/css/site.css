@@ -282,16 +282,15 @@ p:last-child { margin-bottom: 0; }
 .contact-card .text-link { margin-top: 24px; }
 
 /* Footer */
-.site-footer { padding-block: 36px 12px; border-top: 1px solid var(--line); }
-.footer-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 48px; padding-bottom: 24px; }
-.footer-brand img { width: 112px; }
-.footer-contact { display: flex; flex-wrap: wrap; gap: 6px 28px; margin: 0; font-style: normal; font-size: .95rem; color: var(--muted); }
-.footer-contact a { color: var(--ink); }
-.footer-bottom { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0 32px; padding-top: 8px; border-top: 1px solid var(--line); font-size: .9rem; color: var(--muted); }
-.footer-bottom p { margin: 0; }
-.footer-bottom nav { display: flex; flex-wrap: wrap; gap: 0 22px; }
-.footer-bottom a { display: inline-flex; align-items: center; min-height: 44px; color: var(--ink); text-decoration: none; }
-.footer-bottom a:hover { text-decoration: underline; }
+/* Footer: one quiet line (logo, menu, contacts, copyright); the full address lives on the Contact page. */
+.site-footer { padding-block: 18px; border-top: 1px solid var(--line); font-size: .9rem; color: var(--muted); }
+.footer-row { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 28px; }
+.footer-brand img { width: 88px; }
+.footer-row nav, .footer-contact { display: flex; flex-wrap: wrap; gap: 0 20px; }
+.footer-contact { margin-left: auto; font-style: normal; }
+.footer-row nav a, .footer-contact a { display: inline-flex; align-items: center; min-height: 44px; color: var(--ink); text-decoration: none; }
+.footer-row nav a:hover, .footer-contact a:hover { text-decoration: underline; }
+.footer-copy { margin: 0; }
 
 /* One entrance moment: the home title settles as the page opens */
 @media (prefers-reduced-motion: no-preference) {
@@ -388,13 +387,10 @@ p:last-child { margin-bottom: 0; }
   .use p { margin-bottom: 20px; }
   .use-pair { gap: 6px; }
   .map, .map iframe { min-height: 340px; }
-  .footer-top { flex-direction: column; align-items: flex-start; }
-  .footer-brand { padding-block: 4px; }
   .line-figure { padding: 16px 12px; }
-  .footer-contact { flex-direction: column; gap: 0; }
-  .footer-contact a { display: inline-flex; align-items: center; min-height: 44px; }
-  .footer-bottom { flex-direction: column; align-items: flex-start; }
-  .footer-bottom nav { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; column-gap: 24px; }
+  .footer-row { gap: 0 20px; }
+  .footer-row nav { width: 100%; display: grid; grid-template-columns: repeat(3, auto); justify-content: start; column-gap: 24px; }
+  .footer-contact { margin-left: 0; }
   .contact-list a { display: inline-block; padding-block: 8px; }
 }
 .head--top { align-items: start; }
