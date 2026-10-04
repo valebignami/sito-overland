@@ -101,7 +101,6 @@ p:last-child { margin-bottom: 0; }
 .video-toggle:hover { background: var(--red); border-color: var(--red); }
 
 /* Home blocks */
-.finish-names { display: flex; flex-wrap: wrap; gap: 10px 28px; margin: 28px 0 0; padding: 20px 0 0; list-style: none; border-top: 1px solid var(--line); font: 500 2rem/1 var(--font-display); }
 .sector-links { margin-top: 28px; border-bottom: 1px solid var(--line); }
 .sector-links a { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 50px; border-top: 1px solid var(--line); font: 500 1.35rem/1.1 var(--font-display); text-decoration: none; }
 .sector-links a:hover { color: var(--red); }
