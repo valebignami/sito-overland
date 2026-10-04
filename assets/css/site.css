@@ -441,7 +441,7 @@ p:last-child { margin-bottom: 0; }
 .head--last { margin-bottom: 0; }
 
 /* Company: sustainability cards */
-.res-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.res-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-rows: 1fr; gap: 16px; }
 .res-cards article { background: var(--paper); border-top: 3px solid var(--ink); border-radius: var(--radius); padding: 24px 24px 28px; }
 .res-cards small { display: block; margin-bottom: 18px; font: 500 1.1rem/1 var(--font-display); color: var(--red); }
 .res-cards h3 { margin-bottom: 10px; font-size: 1.55rem; }
