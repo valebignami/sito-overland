@@ -5,13 +5,115 @@
   "headers": [
     {
       "source": "/(.*)",
-      "has": [{ "type": "host", "value": ".*\\.vercel\\.app" }],
-      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+      "has": [
+        {
+          "type": "host",
+          "value": ".*\\.vercel\\.app"
+        }
+      ],
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
     },
     {
       "source": "/assets/(css|js)/(.*)",
-      "has": [{ "type": "query", "key": "v" }],
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
+      "has": [
+        {
+          "type": "query",
+          "key": "v"
+        }
+      ],
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/about",
+      "destination": "/company.html",
+      "permanent": true
+    },
+    {
+      "source": "/about/",
+      "destination": "/company.html",
+      "permanent": true
+    },
+    {
+      "source": "/products",
+      "destination": "/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/products/",
+      "destination": "/products.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact/",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/architecture-and-construction",
+      "destination": "/applications.html#architecture",
+      "permanent": true
+    },
+    {
+      "source": "/architecture-and-construction/",
+      "destination": "/applications.html#architecture",
+      "permanent": true
+    },
+    {
+      "source": "/interior-design",
+      "destination": "/applications.html#interior",
+      "permanent": true
+    },
+    {
+      "source": "/interior-design/",
+      "destination": "/applications.html#interior",
+      "permanent": true
+    },
+    {
+      "source": "/commercial-applications",
+      "destination": "/applications.html#commercial",
+      "permanent": true
+    },
+    {
+      "source": "/commercial-applications/",
+      "destination": "/applications.html#commercial",
+      "permanent": true
+    },
+    {
+      "source": "/consumer-products",
+      "destination": "/applications.html#consumer",
+      "permanent": true
+    },
+    {
+      "source": "/consumer-products/",
+      "destination": "/applications.html#consumer",
+      "permanent": true
+    },
+    {
+      "source": "/transportation",
+      "destination": "/applications.html#transport",
+      "permanent": true
+    },
+    {
+      "source": "/transportation/",
+      "destination": "/applications.html#transport",
+      "permanent": true
     }
   ]
 }

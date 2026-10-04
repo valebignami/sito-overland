@@ -54,6 +54,8 @@ cpSync(join(root, 'assets'), join(out, 'assets'), { recursive: true });
 
 // {{v:path}} becomes path?v=<content hash>, so browsers fetch the new file after each publish
 const hashes = {};
+const site = 'https://www.overland-aluminium.com';
+const indexed = [];
 const versioned = (path) => `${path}?v=${hashes[path] ??= createHash('sha1').update(readFileSync(join(root, path))).digest('hex').slice(0, 8)}`;
 
 for (const file of readdirSync(join(root, 'src/pages')).filter((f) => f.endsWith('.html'))) {
@@ -64,5 +66,14 @@ for (const file of readdirSync(join(root, 'src/pages')).filter((f) => f.endsWith
   html = html.replace(new RegExp(`data-page="${page}"`, 'g'), `data-page="${page}" aria-current="page"`);
   html = html.replace(/\{\{v:([^}]+)\}\}/g, (_, path) => versioned(path));
   writeFileSync(join(out, file), html);
+  if (!html.includes('name="robots" content="noindex')) indexed.push(file === 'index.html' ? '' : file);
   console.log('built', file);
 }
+
+// Sitemap and robots.txt for search engines, listing every page that is not marked noindex
+writeFileSync(join(out, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${indexed.map((path) => `  <url><loc>${site}/${path}</loc></url>`).join('\n')}
+</urlset>
+`);
+writeFileSync(join(out, 'robots.txt'), `User-agent: *\nAllow: /\n\nSitemap: ${site}/sitemap.xml\n`);
