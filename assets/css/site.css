@@ -290,6 +290,9 @@ p:last-child { margin-bottom: 0; }
 .footer-contact { margin-left: auto; font-style: normal; }
 .footer-row nav a, .footer-contact a { display: inline-flex; align-items: center; min-height: 44px; color: var(--ink); text-decoration: none; }
 .footer-row nav a:hover, .footer-contact a:hover { text-decoration: underline; }
+/* Email and phone always look like links: on a phone there is no hover to reveal them. */
+.footer-contact a { text-decoration: underline; text-decoration-color: var(--line); }
+.footer-contact a:hover { text-decoration-color: currentColor; }
 .footer-copy { margin: 0; }
 
 /* One entrance moment: the home title settles as the page opens */
