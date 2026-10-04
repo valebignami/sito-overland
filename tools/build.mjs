@@ -65,6 +65,19 @@ for (const file of readdirSync(join(root, 'src/pages')).filter((f) => f.endsWith
   // Mark the current page in the navigation
   html = html.replace(new RegExp(`data-page="${page}"`, 'g'), `data-page="${page}" aria-current="page"`);
   html = html.replace(/\{\{v:([^}]+)\}\}/g, (_, path) => versioned(path));
+  // Link previews (WhatsApp, LinkedIn, email): page title unless the page sets its own, one shared image
+  const url = `${site}/${file === 'index.html' ? '' : file}`;
+  const title = html.match(/<title>([^<]*)<\/title>/)[1];
+  html = html.replace('</head>', `${html.includes('property="og:title"') ? '' : `  <meta property="og:title" content="${title}">\n`}  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Overland Anodized Aluminium">
+  <meta property="og:url" content="${url}">
+  <meta property="og:image" content="${site}/assets/img/share.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Overland logo next to stacked aluminium coils">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="${url}">
+</head>`);
   writeFileSync(join(out, file), html);
   if (!html.includes('name="robots" content="noindex')) indexed.push(file === 'index.html' ? '' : file);
   console.log('built', file);
