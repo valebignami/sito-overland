@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <!-- include:head -->
+  <link rel="stylesheet" href="assets/css/technology.css">
   <title>Technology | Overland Anodized Aluminium</title>
   <meta name="description" content="How continuous coil anodizing works: cleaning, etching, anodizing, colouring and sealing on automated lines, with no rack marks and consistent colour.">
 </head>
@@ -26,14 +27,14 @@
           <p>The coil unwinds at one end of the line and is rewound at the other. In between it passes through every bath without stopping, never clamped or racked.</p>
         </div>
         <figure class="line-figure">
-<!-- include:line-svg -->
+<!-- include:line-svg-soft -->
           <figcaption class="line-caption">Coil to coil: no hanging marks, a uniform surface.</figcaption>
         </figure>
         <ol class="steps">
-          <li><strong>Cleaning</strong><span>Removes oils and residues left from rolling.</span></li>
-          <li><strong>Etching</strong><span>Evens out the surface and sets the base look before anodizing.</span></li>
-          <li class="is-key"><strong>Anodizing</strong><span>Electric current grows the oxide layer, 2 to 10 µm as standard, up to 15 µm on request.</span></li>
-          <li><strong>Colouring</strong><span>The shade is fixed inside the pores of the oxide, so it cannot peel or flake.</span></li>
+          <li><strong>Cleaning</strong><span>Removes oils and residues left on the metal from rolling.</span></li>
+          <li><strong>Etching</strong><span>Evens out the surface and sets the base look of the metal.</span></li>
+          <li class="is-key"><strong>Anodizing</strong><span>Electric current grows a hard oxide layer on the surface.</span></li>
+          <li><strong>Colouring</strong><span>Fixes the shade inside the oxide, so it cannot peel or flake.</span></li>
           <li><strong>Sealing</strong><span>Closes the pores to lock in colour and corrosion resistance.</span></li>
         </ol>
       </div>
@@ -45,49 +46,76 @@
           <h2 id="compare-title">Coil or batch.</h2>
           <p>Both methods anodize aluminium. The difference is how the metal travels through the baths, and it shows in the surface you receive.</p>
         </div>
-        <div class="vs">
-          <div class="vs-spacer"></div>
-          <div class="vs-head vs-head--coil">
+        <div class="cb">
+          <div class="cb-corner" aria-hidden="true"></div>
+          <div class="cb-head cb-head--coil">
             <h3>Continuous coil</h3>
-            <p class="vs-tag">How Overland works</p>
-            <p class="vs-how">The whole coil moves through all baths on one line.</p>
-            <svg class="lane-svg" viewBox="0 0 1200 160" role="img" aria-label="The coil unwinds, runs through five baths in one continuous strip and is rewound">
-  <path class="lane-tanks" d="M190 58V128H330V58M370 58V128H510V58M550 58V128H690V58M730 58V128H870V58M910 58V128H1050V58"/>
-  <path class="lane-strip" d="M50 18H190L260 112L330 18H370L440 112L510 18H550L620 112L690 18H730L800 112L870 18H910L980 112L1050 18H1150"/>
-  <circle class="lane-coil" cx="50" cy="52" r="34"/><circle class="lane-coil" cx="50" cy="52" r="13"/>
-  <circle class="lane-coil" cx="1150" cy="52" r="34"/><circle class="lane-coil" cx="1150" cy="52" r="13"/>
-  <g class="lane-text"><text x="260" y="152" text-anchor="middle">Cleaning</text><text x="440" y="152" text-anchor="middle">Etching</text><text x="620" y="152" text-anchor="middle">Anodizing</text><text x="800" y="152" text-anchor="middle">Colouring</text><text x="980" y="152" text-anchor="middle">Sealing</text></g>
-</svg>
+            <p class="cb-tag">How Overland works</p>
+            <p>The whole coil moves through all baths on one line.</p>
           </div>
-          <div class="vs-head vs-head--batch">
+          <div class="cb-head cb-head--batch">
             <h3>Batch</h3>
-            <p class="vs-how">Parts or sheets hang from racks and are dipped tank by tank.</p>
-            <svg class="lane-svg" viewBox="0 0 1200 160" role="img" aria-label="Parts hang from a rack and are lowered into one tank, then lifted and moved to the next">
-  <path class="lane-tanks" d="M190 58V128H330V58M370 58V128H510V58M550 58V128H690V58M730 58V128H870V58M910 58V128H1050V58"/>
-  <path class="lane-rail" d="M150 14H1050"/>
-  <g class="lane-parts"><path d="M400 14V40"/><rect x="388" y="40" width="24" height="62"/><path d="M430 14V40"/><rect x="418" y="40" width="24" height="62"/><path d="M460 14V40"/><rect x="448" y="40" width="24" height="62"/></g>
-  <path class="lane-move" d="M490 30C530 -6 600 -6 640 30"/>
-  <path class="lane-move" d="M670 30C710 -6 780 -6 820 30"/>
-  <path class="lane-move" d="M850 30C890 -6 960 -6 1000 30"/>
-  <g class="lane-text"><text x="260" y="152" text-anchor="middle">Cleaning</text><text x="440" y="152" text-anchor="middle">Etching</text><text x="620" y="152" text-anchor="middle">Anodizing</text><text x="800" y="152" text-anchor="middle">Colouring</text><text x="980" y="152" text-anchor="middle">Sealing</text></g>
-</svg>
+            <p>Parts or sheets hang from racks and are dipped tank by tank.</p>
           </div>
-          <div class="vs-label">Surface</div>
-          <p class="vs-cell vs-cell--coil"><span>Coil: </span>No contact or hanging marks.</p>
-          <p class="vs-cell vs-cell--batch"><span>Batch: </span>Contact points where the rack holds the part.</p>
-          <div class="vs-label">Colour</div>
-          <p class="vs-cell vs-cell--coil"><span>Coil: </span>Consistent along the coil and between runs.</p>
-          <p class="vs-cell vs-cell--batch"><span>Batch: </span>Can vary from one batch to the next.</p>
-          <div class="vs-label">Format</div>
-          <p class="vs-cell vs-cell--coil"><span>Coil: </span>Coils, sheets and strips, ready for fabrication.</p>
-          <p class="vs-cell vs-cell--batch"><span>Batch: </span>Finished parts and profiles.</p>
-          <div class="vs-label">Resources</div>
-          <p class="vs-cell vs-cell--coil"><span>Coil: </span>Fewer chemicals, less water and energy, less waste.</p>
-          <p class="vs-cell vs-cell--batch"><span>Batch: </span>More chemicals, water and energy for the same result.</p>
-          <div class="vs-label">Cost</div>
-          <p class="vs-cell vs-cell--coil"><span>Coil: </span>An efficient line keeps production costs down, and customers see it in the price.</p>
-          <p class="vs-cell vs-cell--batch"><span>Batch: </span>Racking and handling each batch add to production costs.</p>
+
+          <h4 class="cb-label">Surface</h4>
+          <figure class="cb-cell cb-cell--coil">
+            <svg viewBox="0 0 320 120" role="img" aria-label="An aluminium coil unrolling into a flat strip with an even surface and no marks">
+              <ellipse class="cb-shadow" cx="180" cy="104" rx="132" ry="4"/>
+              <path class="cb-silver" d="M56 96H300L286 72H56Z"/>
+              <circle class="cb-silver-roll" cx="56" cy="62" r="34"/>
+              <g class="cb-rings"><circle cx="56" cy="62" r="27"/><circle cx="56" cy="62" r="20"/><circle cx="56" cy="62" r="13"/></g>
+              <circle class="cb-core" cx="56" cy="62" r="7"/>
+            </svg>
+            <figcaption><span class="visually-hidden">Coil: </span>No contact or hanging marks.</figcaption>
+          </figure>
+          <figure class="cb-cell cb-cell--batch">
+            <svg viewBox="0 0 320 120" role="img" aria-label="A sheet hanging from a rack by two hooks, with a mark where each hook holds it">
+              <ellipse class="cb-shadow" cx="160" cy="114" rx="56" ry="3"/>
+              <path class="cb-rail" d="M80 12H240M132 12V30M188 12V30"/>
+              <rect class="cb-silver" x="108" y="30" width="104" height="78" rx="2"/>
+              <circle class="cb-halo" cx="132" cy="34" r="8"/><circle class="cb-halo" cx="188" cy="34" r="8"/>
+              <circle class="cb-mark" cx="132" cy="34" r="3.2"/><circle class="cb-mark" cx="188" cy="34" r="3.2"/>
+            </svg>
+            <figcaption><span class="visually-hidden">Batch: </span>Contact points where the rack holds the part.</figcaption>
+          </figure>
+
+          <h4 class="cb-label">Colour</h4>
+          <figure class="cb-cell cb-cell--coil">
+            <svg viewBox="0 0 320 120" role="img" aria-label="A gold coil unrolling into a flat strip, the same shade from one end to the other">
+              <ellipse class="cb-shadow" cx="180" cy="104" rx="132" ry="4"/>
+              <path class="cb-gold-m" d="M56 96H300L286 72H56Z"/>
+              <circle class="cb-gold-roll" cx="56" cy="62" r="34"/>
+              <g class="cb-rings"><circle cx="56" cy="62" r="27"/><circle cx="56" cy="62" r="20"/><circle cx="56" cy="62" r="13"/></g>
+              <circle class="cb-core" cx="56" cy="62" r="7"/>
+            </svg>
+            <figcaption><span class="visually-hidden">Coil: </span>Consistent along the coil and between runs.</figcaption>
+          </figure>
+          <figure class="cb-cell cb-cell--batch">
+            <svg viewBox="0 0 320 120" role="img" aria-label="Three gold sheets from different batches, each a slightly different shade">
+              <ellipse class="cb-shadow" cx="64" cy="102" rx="40" ry="3"/><ellipse class="cb-shadow" cx="160" cy="102" rx="40" ry="3"/><ellipse class="cb-shadow" cx="256" cy="102" rx="40" ry="3"/>
+              <rect class="cb-gold-l" x="22" y="30" width="84" height="66" rx="2"/>
+              <rect class="cb-gold-d" x="118" y="30" width="84" height="66" rx="2"/>
+              <rect class="cb-gold-m" x="214" y="30" width="84" height="66" rx="2"/>
+            </svg>
+            <figcaption><span class="visually-hidden">Batch: </span>Can vary from one batch to the next.</figcaption>
+          </figure>
+
+          <h4 class="cb-label">Resources</h4>
+          <p class="cb-cell cb-cell--coil cb-text"><span class="visually-hidden">Coil: </span>Fewer chemicals, less water and energy. An efficient line keeps production costs down.</p>
+          <p class="cb-cell cb-cell--batch cb-text"><span class="visually-hidden">Batch: </span>More chemicals, water and energy, plus racking and handling for each batch.</p>
         </div>
+        <svg class="cb-defs" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="cb-silver" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4f6f7"/><stop offset=".55" stop-color="#dde1e3"/><stop offset="1" stop-color="#c3c9cc"/></linearGradient>
+            <radialGradient id="cb-silver-roll" cx=".38" cy=".35" r=".75"><stop offset="0" stop-color="#fbfcfc"/><stop offset=".6" stop-color="#d4d9dc"/><stop offset="1" stop-color="#b1b8bc"/></radialGradient>
+            <linearGradient id="cb-gold-l" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4ead0"/><stop offset="1" stop-color="#e0cc9c"/></linearGradient>
+            <linearGradient id="cb-gold-m" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eadbb2"/><stop offset="1" stop-color="#cdb27a"/></linearGradient>
+            <linearGradient id="cb-gold-d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d6bd86"/><stop offset="1" stop-color="#a98a52"/></linearGradient>
+            <radialGradient id="cb-gold-roll" cx=".38" cy=".35" r=".75"><stop offset="0" stop-color="#f6edd3"/><stop offset=".6" stop-color="#dcc590"/><stop offset="1" stop-color="#b9995e"/></radialGradient>
+            <filter id="cb-blur" x="-20%" y="-200%" width="140%" height="500%"><feGaussianBlur stdDeviation="3.5"/></filter>
+          </defs>
+        </svg>
       </div>
     </section>
   </main>
