@@ -67,35 +67,20 @@
     });
   });
 
+  // Home film: plays while on screen, never for visitors who ask for reduced motion; controls appear only if autoplay is refused.
   const video = document.getElementById('hero-video');
-  const btn = document.querySelector('.video-toggle');
-  if (video && btn) {
+  if (video) {
     const motion = matchMedia('(prefers-reduced-motion: reduce)');
-    let userPaused = motion.matches;
     video.controls = false;
-    btn.hidden = false;
-    const label = () => {
-      btn.textContent = video.paused ? 'Play video' : 'Pause video';
-      btn.setAttribute('aria-pressed', String(!video.paused));
-    };
-    const play = () => video.play().catch(() => { video.controls = true; label(); });
-    btn.addEventListener('click', () => {
-      if (video.paused) { userPaused = false; play(); }
-      else { userPaused = true; video.pause(); }
-    });
-    video.addEventListener('play', label);
-    video.addEventListener('pause', label);
-    video.addEventListener('error', () => { btn.hidden = true; video.controls = true; });
-    motion.addEventListener('change', (event) => {
-      if (event.matches) { userPaused = true; video.pause(); }
-    });
+    const play = () => video.play().catch(() => { video.controls = true; });
+    video.addEventListener('error', () => { video.controls = true; });
+    motion.addEventListener('change', (event) => { if (event.matches) video.pause(); });
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(([entry]) => {
-        if (entry.isIntersecting && !userPaused) play();
+        if (entry.isIntersecting && !motion.matches) play();
         else if (!entry.isIntersecting) video.pause();
       }, { threshold: 0.25 }).observe(video);
     }
     document.addEventListener('visibilitychange', () => { if (document.hidden) video.pause(); });
-    label();
   }
 })();

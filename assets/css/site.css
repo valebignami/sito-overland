@@ -95,10 +95,6 @@ p:last-child { margin-bottom: 0; }
 .hero-statement .btn-white:focus-visible { outline-color: white; }
 .hero-film { position: relative; background: var(--graphite); }
 .hero-film video { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
-/* Variant: the film opens the page at full screen height, the red band follows it. */
-.home-hero--film-first .hero-film video { aspect-ratio: auto; height: calc(100svh - 81px - 128px); min-height: 420px; }
-.video-toggle { position: absolute; right: var(--gutter); bottom: 24px; min-height: 44px; padding: 10px 18px; border: 1px solid rgb(255 255 255 / .8); color: white; background: rgb(30 34 32 / .7); font-size: .95rem; }
-.video-toggle:hover { background: var(--red); border-color: var(--red); }
 
 /* Home blocks */
 .sector-links { margin-top: 28px; border-bottom: 1px solid var(--line); }
@@ -370,9 +366,6 @@ p:last-child { margin-bottom: 0; }
   .hero-statement h1 { font-size: clamp(2.1rem, 9vw, 2.5rem); }
   .hero-intro p { font-size: 1rem; line-height: 1.45; margin-bottom: 10px; }
   .hero-statement .btn { min-height: 40px; padding: 6px 14px; gap: 10px; font-size: .9rem; }
-  .hero-film video { aspect-ratio: 4 / 3; }
-  .home-hero--film-first .hero-film video { aspect-ratio: 16 / 9; height: auto; min-height: 0; }
-  .video-toggle { bottom: 10px; right: 10px; min-height: 40px; padding: 4px 10px; font-size: .8rem; background: rgb(30 34 32 / .45); border-color: rgb(255 255 255 / .5); }
   .sector-links a { font-size: 1.25rem; }
   .facts-band { grid-template-columns: 1fr 1fr; row-gap: 0; }
   .facts-band div, .facts-band div + div { padding: 20px 16px 20px 0; border-left: 0; border-bottom: 1px solid var(--line); }
@@ -438,7 +431,6 @@ p:last-child { margin-bottom: 0; }
   h2 { font-size: clamp(2rem, 3vw, 3rem); }
   .hero-statement .wrap { padding-block: 28px; }
   .hero-statement h1 { font-size: clamp(2.4rem, 4vw, 3.6rem); }
-  .home-hero--film-first .hero-film video { height: calc(100svh - 64px - 112px); min-height: 300px; }
   .page-hero { min-height: clamp(340px, 62vh, 620px); padding-block: 40px; }
   .sector-hero > img { aspect-ratio: auto; height: clamp(300px, 64vh, 470px); }
   .sector-index img { aspect-ratio: 3 / 2; }
