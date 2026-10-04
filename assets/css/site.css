@@ -15,7 +15,7 @@
   --font-display: "Barlow Condensed", "Arial Narrow", sans-serif;
   --font-body: "Source Sans 3", "Segoe UI", sans-serif;
   --gutter: clamp(20px, 4.5vw, 72px);
-  --section: clamp(72px, 8vw, 128px);
+  --section: clamp(56px, 7vw, 112px);
   --radius: 8px;
   --max: 1440px;
 }
@@ -57,7 +57,7 @@ p:last-child { margin-bottom: 0; }
 /* Home sections open with the menu word they lead to, styled like the active menu item. */
 .section-tag { display: inline-block; margin-bottom: 20px; padding: 16px 0 8px; border-bottom: 2px solid var(--red); font-size: 1.1rem; font-weight: 600; line-height: 1; text-decoration: none; }
 .section-tag:hover { color: var(--red); }
-.split figure img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); }
+.split figure img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--radius); }
 
 /* Links and buttons */
 .actions { display: flex; flex-wrap: wrap; gap: 14px 28px; align-items: center; margin-top: 32px; }
@@ -172,7 +172,7 @@ p:last-child { margin-bottom: 0; }
 .steps .is-key { border-top: 4px solid var(--red); margin-top: -2px; padding: 14px 20px 16px; background: var(--paper); }
 .steps .is-key::before, .steps .is-key strong { color: var(--red); }
 .steps strong { display: block; margin-bottom: 6px; font: 500 1.3rem/1.1 var(--font-display); }
-.steps span { display: block; font-size: .95rem; color: var(--muted); line-height: 1.5; }
+.steps span { display: block; font-size: 1rem; color: var(--muted); line-height: 1.5; }
 
 /* Technology: coil or batch. Each difference is drawn as the surface you receive, in soft satin metal;
    both methods are styled alike, so neither reads as the right or wrong answer. */
@@ -181,7 +181,7 @@ p:last-child { margin-bottom: 0; }
 .cb-head p:last-child { margin-top: auto; padding-top: 10px; }
 .cb-head h3 { font-size: clamp(1.9rem, 2.6vw, 2.5rem); line-height: 1; }
 .cb-head p { margin: 0; max-width: 36ch; font-size: 1rem; line-height: 1.5; color: var(--muted); }
-.cb-head .cb-tag { margin-top: 6px; font-size: .95rem; font-weight: 600; }
+.cb-head .cb-tag { margin-top: 6px; font-size: 1rem; font-weight: 600; }
 .cb-label { margin: 0; padding: 22px 0; border-bottom: 1px solid var(--line); font: 500 clamp(1.3rem, 1.7vw, 1.6rem)/1.15 var(--font-display); }
 .cb-cell { margin: 0; padding: 20px 0 22px; border-bottom: 1px solid var(--line); font-size: 1.05rem; line-height: 1.5; }
 .cb-cell > svg { display: block; width: 100%; max-width: 360px; height: auto; margin-bottom: 10px; }
@@ -225,7 +225,7 @@ p:last-child { margin-bottom: 0; }
 .swatch-button img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 50%; outline: 1px solid rgb(0 0 0 / .08); outline-offset: -1px; transition: transform 160ms, outline-color 160ms; }
 .swatch-button:hover img { transform: translateY(-3px); }
 .swatch-button[aria-pressed="true"] img { outline: 2px solid var(--ink); outline-offset: 3px; }
-.chart-note { margin-top: 32px; font-size: .95rem; color: var(--muted); }
+.chart-note { margin-top: 32px; font-size: 1rem; color: var(--muted); }
 .spec-layout { display: grid; grid-template-columns: minmax(0, .75fr) minmax(0, 1.7fr); gap: clamp(40px, 5vw, 80px); align-items: start; }
 .spec-layout .head { display: block; position: sticky; top: 104px; margin: 0; }
 .spec-layout .head h2 { margin-bottom: 20px; }
@@ -236,14 +236,14 @@ p:last-child { margin-bottom: 0; }
 .spec-table td { font-weight: 600; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
 .imp { font-weight: 400; color: var(--muted); }
 .spec-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; margin-top: 44px; }
-.spec-note { margin-top: 28px; font-size: .95rem; color: var(--muted); }
+.spec-note { margin-top: 28px; font-size: 1rem; color: var(--muted); }
 
 /* Applications */
 .sector-index { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; margin-top: clamp(40px, 4vw, 56px); }
 .sector-index a { display: block; text-decoration: none; }
 .sector-thumb { display: block; overflow: hidden; border-radius: var(--radius); }
 .sector-index img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform 700ms cubic-bezier(.2, .7, .2, 1); }
-.sector-index span:not(.sector-thumb) { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 64px; padding-top: 8px; border-bottom: 1px solid var(--line); font: 400 1.3rem/1.2 var(--font-body); transition: color 200ms, border-color 200ms; }
+.sector-index span:not(.sector-thumb) { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 64px; padding-top: 8px; border-bottom: 1px solid var(--line); font: 400 1.125rem/1.25 var(--font-body); transition: color 200ms, border-color 200ms; }
 .sector-index span svg { transition: transform 300ms cubic-bezier(.2, .7, .2, 1); }
 .sector-index a:is(:hover, :focus-visible) span:not(.sector-thumb) { color: var(--red); border-color: var(--red); }
 .sector-index a:is(:hover, :focus-visible) img { transform: scale(1.08); }
@@ -253,18 +253,18 @@ p:last-child { margin-bottom: 0; }
 .sector-hero > img { width: 100%; aspect-ratio: 21 / 9; object-fit: cover; }
 .sector-card { position: absolute; top: 50%; right: clamp(24px, 4vw, 64px); width: min(480px, 44%); transform: translateY(-50%); padding: clamp(28px, 3vw, 44px); background: var(--graphite); color: #fff; }
 .sector-card h2 { margin-bottom: 18px; font-size: clamp(2rem, 3vw, 3rem); color: #fff; }
-.sector-card p { font-size: 1rem; line-height: 1.6; color: rgb(255 255 255 / .78); }
-.sector-card .lede { margin-bottom: 12px; font-size: 1.15rem; color: #fff; }
+.sector-card p { font-size: 1.0625rem; line-height: 1.6; color: rgb(255 255 255 / .78); }
+.sector-card .lede { margin-bottom: 12px; font-size: 1.25rem; color: #fff; }
 /* Each use on its own row, as on the previous site: two photos beside the text, sides alternating. */
 .use-grid { margin-top: 24px; border-bottom: 1px solid var(--line); }
 .use { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); grid-template-areas: "title pair" "text pair"; column-gap: clamp(32px, 5vw, 80px); padding-block: clamp(20px, 2.2vw, 32px); border-top: 1px solid var(--line); }
 .use:nth-child(even) { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); grid-template-areas: "pair title" "pair text"; }
 .use-pair { grid-area: pair; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .use-photo { display: block; overflow: hidden; border-radius: var(--radius); }
-.use-pair img { width: 100%; aspect-ratio: 1; object-fit: cover; transition: transform 700ms cubic-bezier(.2, .7, .2, 1); }
+.use-pair img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform 700ms cubic-bezier(.2, .7, .2, 1); }
 .use-photo:hover img { transform: scale(1.06); }
 .use h3 { grid-area: title; align-self: end; margin: 0 0 14px; font-size: clamp(1.6rem, 2.2vw, 2.1rem); }
-.use p { grid-area: text; align-self: start; max-width: 40ch; font-size: 1.05rem; color: var(--muted); line-height: 1.6; }
+.use p { grid-area: text; align-self: start; max-width: 40ch; font-size: 1.125rem; color: var(--muted); line-height: 1.6; }
 
 /* Contact */
 .visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
@@ -277,7 +277,7 @@ p:last-child { margin-bottom: 0; }
 .contact-card h2 { margin-bottom: 24px; font-size: clamp(2.2rem, 3vw, 3rem); }
 .contact-list { border-bottom: 1px solid var(--line); }
 .contact-list div { padding-block: 16px; border-top: 1px solid var(--line); }
-.contact-list dt { margin-bottom: 4px; font-size: .9rem; color: var(--muted); }
+.contact-list dt { margin-bottom: 4px; font-size: .95rem; color: var(--muted); }
 .contact-list dd { font: 500 clamp(1.5rem, 2vw, 1.8rem)/1.2 var(--font-display); overflow-wrap: anywhere; }
 .contact-list .contact-address { font: 400 1.05rem/1.55 var(--font-body); }
 .contact-list a { text-decoration: none; background: linear-gradient(var(--red), var(--red)) 0 100% / 0 2px no-repeat; transition: background-size 300ms cubic-bezier(.2, .7, .2, 1); }
@@ -286,7 +286,7 @@ p:last-child { margin-bottom: 0; }
 
 /* Footer */
 /* Footer: one quiet line (logo, menu, contacts, copyright); the full address lives on the Contact page. */
-.site-footer { padding-block: 18px; border-top: 1px solid var(--line); font-size: .9rem; color: var(--muted); }
+.site-footer { padding-block: 18px; border-top: 1px solid var(--line); font-size: .95rem; color: var(--muted); }
 .footer-row { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 28px; }
 .footer-brand img { width: 88px; }
 .footer-row nav, .footer-contact { display: flex; flex-wrap: wrap; gap: 0 20px; }
@@ -363,7 +363,7 @@ p:last-child { margin-bottom: 0; }
   /* Phone: a thin red strip and a taller video, so the video leads the first screen. */
   .hero-statement .wrap { gap: 8px; padding-block: 20px 18px; }
   .hero-statement h1 { font-size: clamp(2.1rem, 9vw, 2.5rem); }
-  .hero-intro p { font-size: .95rem; line-height: 1.45; margin-bottom: 8px; }
+  .hero-intro p { font-size: 1rem; line-height: 1.45; margin-bottom: 10px; }
   .hero-statement .btn { min-height: 40px; padding: 6px 14px; gap: 10px; font-size: .9rem; }
   .hero-film video { aspect-ratio: 4 / 3; }
   .home-hero--film-first .hero-film video { aspect-ratio: 16 / 9; height: auto; min-height: 0; }
@@ -380,7 +380,7 @@ p:last-child { margin-bottom: 0; }
   .cb-corner { display: none; }
   .cb-head { padding-bottom: 14px; }
   .cb-head h3 { font-size: 1.6rem; }
-  .cb-head p { font-size: .9rem; }
+  .cb-head p { font-size: .95rem; }
   .cb-label { grid-column: 1 / -1; padding: 18px 0 0; border-bottom: 0; }
   .cb-cell { padding: 10px 0 18px; font-size: .95rem; }
   .props-intro { grid-template-columns: 1fr; }
@@ -388,8 +388,8 @@ p:last-child { margin-bottom: 0; }
   /* Two columns on phones too, with smaller type, so the eight properties read as a grid, not a long list. */
   .props div { padding: 16px 12px 16px 0; }
   .props div:nth-child(even) { padding: 16px 0 16px 12px; }
-  .props h3 { margin-bottom: 6px; font-size: 1.2rem; }
-  .props p { font-size: .9rem; line-height: 1.45; }
+  .props h3 { margin-bottom: 6px; font-size: 1.25rem; }
+  .props p { font-size: .95rem; line-height: 1.45; }
   .finish-tabs.is-enhanced .tablist { gap: 6px; }
   .tab { flex: 1; padding-inline: 8px; font-size: 1.4rem; }
   .tab-finish { grid-template-columns: 1fr; }
@@ -399,7 +399,7 @@ p:last-child { margin-bottom: 0; }
   .spec-table th { width: 42%; }
   .sector-index { grid-template-columns: 1fr 1fr; gap: 12px; }
   .sector-index a:first-child img { aspect-ratio: 16 / 9; }
-  .sector-index span:not(.sector-thumb) { font-size: 1.2rem; }
+  .sector-index span:not(.sector-thumb) { min-height: 56px; font-size: 1rem; }
   .use, .use:nth-child(even) { grid-template-columns: 1fr; grid-template-areas: "title" "text" "pair"; }
   .use p { margin-bottom: 20px; }
   .use-pair { gap: 6px; }
@@ -408,14 +408,14 @@ p:last-child { margin-bottom: 0; }
   /* Phone: the menu is already in the header, so the footer keeps two short lines: logo and copyright, then email and phone. */
   .footer-row { gap: 0 20px; }
   .footer-row nav { display: none; }
-  .footer-copy { order: 1; margin-left: auto; font-size: .85rem; }
+  .footer-copy { order: 1; margin-left: auto; font-size: .9rem; }
   .footer-contact { order: 2; width: 100%; margin-left: 0; justify-content: space-between; }
   .contact-list a { display: inline-block; padding-block: 8px; }
 }
 .head--top { align-items: start; }
 /* Statement heading across the page, the text below in two columns. */
 .head--stack { display: block; }
-.head--stack h2 { max-width: 18ch; margin-bottom: clamp(24px, 3vw, 40px); font-size: clamp(2.4rem, 4.2vw, 4rem); }
+.head--stack h2 { max-width: 18ch; margin-bottom: clamp(24px, 3vw, 40px); }
 .head--stack > div { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px 64px; }
 .head--stack p { max-width: 52ch; }
 @media (max-width: 700px) { .head--stack > div { grid-template-columns: 1fr; } }
@@ -424,7 +424,7 @@ p:last-child { margin-bottom: 0; }
 /* Laptops with Windows display scaling (125-175%) give the page a short window, about 1100 x 580.
    Heights and type follow the window height there, so the first screen shows more than one block. */
 @media (min-width: 900px) and (max-height: 760px) {
-  :root { --section: clamp(56px, 6.5vw, 96px); }
+  :root { --section: clamp(48px, 5.5vw, 80px); }
   .header-row { min-height: 64px; }
   .brand img { width: 118px; }
   html { scroll-padding-top: 80px; }
