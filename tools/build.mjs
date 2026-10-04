@@ -54,7 +54,7 @@ cpSync(join(root, 'assets'), join(out, 'assets'), { recursive: true });
 
 // {{v:path}} becomes path?v=<content hash>, so browsers fetch the new file after each publish
 const hashes = {};
-const site = 'https://www.overland-aluminium.com';
+const site = 'https://overland-aluminium.com';
 const indexed = [];
 const versioned = (path) => `${path}?v=${hashes[path] ??= createHash('sha1').update(readFileSync(join(root, path))).digest('hex').slice(0, 8)}`;
 
