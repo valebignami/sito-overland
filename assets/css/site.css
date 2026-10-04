@@ -353,11 +353,12 @@ p:last-child { margin-bottom: 0; }
   body { font-size: 1.0625rem; }
   h1 { font-size: clamp(2.6rem, 11vw, 3.4rem); }
   h2 { font-size: clamp(2.1rem, 9vw, 2.6rem); }
-  /* Phone: a thin red strip, so the video shows in the first screen. */
-  .hero-statement .wrap { gap: 12px; padding-block: 22px 24px; }
+  /* Phone: a thin red strip and a taller video, so the video leads the first screen. */
+  .hero-statement .wrap { gap: 8px; padding-block: 20px 18px; }
   .hero-statement h1 { font-size: clamp(2.1rem, 9vw, 2.5rem); }
-  .hero-intro p { font-size: 1rem; line-height: 1.45; margin-bottom: 14px; }
-  .hero-statement .btn { min-height: 44px; padding: 9px 16px; gap: 12px; font-size: .95rem; }
+  .hero-intro p { font-size: .95rem; line-height: 1.45; margin-bottom: 8px; }
+  .hero-statement .btn { min-height: 40px; padding: 6px 14px; gap: 10px; font-size: .9rem; }
+  .hero-film video { aspect-ratio: 4 / 3; }
   .home-hero--film-first .hero-film video { aspect-ratio: 16 / 9; height: auto; min-height: 0; }
   .video-toggle { bottom: 10px; right: 10px; min-height: 40px; padding: 4px 10px; font-size: .8rem; background: rgb(30 34 32 / .45); border-color: rgb(255 255 255 / .5); }
   .sector-links a { font-size: 1.25rem; }
