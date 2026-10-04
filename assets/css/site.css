@@ -124,7 +124,7 @@ p:last-child { margin-bottom: 0; }
 .page-hero-card .jump a:hover { color: #fff; border-color: var(--red); }
 
 /* Company */
-.facts-band { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin-top: clamp(48px, 5vw, 72px); border-top: 1px solid var(--ink); }
+.facts-band { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: clamp(48px, 5vw, 72px); border-top: 1px solid var(--ink); }
 .facts-band div { padding: 24px 24px 0 0; }
 .facts-band div + div { padding-left: 24px; border-left: 1px solid var(--line); }
 .facts-band dt { font: 500 clamp(2rem, 2.8vw, 2.7rem)/1.02 var(--font-display); color: var(--red); }
@@ -310,8 +310,8 @@ p:last-child { margin-bottom: 0; }
   .props-layout { grid-template-columns: 1fr; }
   .props-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0 48px; align-items: start; }
   .props-intro figure { grid-column: 2; grid-row: 1 / span 2; margin: 0; }
-  .facts-band { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .facts-band div:nth-child(4) { padding-left: 0; border-left: 0; }
+  .facts-band { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 24px; }
+  .facts-band div:nth-child(3) { padding-left: 0; border-left: 0; }
   .sector-index { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .spec-layout { grid-template-columns: 1fr; }
   .spec-layout .head { position: static; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px 64px; align-items: end; }
@@ -354,10 +354,9 @@ p:last-child { margin-bottom: 0; }
   .home-hero--film-first .hero-film video { aspect-ratio: 16 / 9; height: auto; min-height: 0; }
   .video-toggle { bottom: 12px; min-height: 40px; padding: 8px 14px; font-size: .9rem; }
   .sector-links a { font-size: 1.25rem; }
-  .facts-band { grid-template-columns: 1fr 1fr; }
+  .facts-band { grid-template-columns: 1fr 1fr; row-gap: 0; }
   .facts-band div, .facts-band div + div { padding: 20px 16px 20px 0; border-left: 0; border-bottom: 1px solid var(--line); }
   .facts-band div:nth-child(even) { padding-left: 16px; border-left: 1px solid var(--line); }
-  .facts-band div:last-child { grid-column: 1 / -1; padding-left: 0; border-left: 0; }
   .steps { grid-template-columns: 1fr; row-gap: 0; }
   .steps li, .steps li + li, .steps li:nth-child(4) { padding: 18px 0 20px; display: grid; grid-template-columns: 44px minmax(0, 1fr); column-gap: 8px; border-top-width: 1px; }
   .steps .is-key { border-top-width: 2px; margin: 0 -12px; padding: 18px 12px 20px; }
