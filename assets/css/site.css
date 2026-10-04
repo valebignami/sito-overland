@@ -318,7 +318,10 @@ p:last-child { margin-bottom: 0; }
   .props-intro figure { grid-column: 2; grid-row: 1 / span 2; margin: 0; }
   .facts-band { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 24px; }
   .facts-band div:nth-child(3) { padding-left: 0; border-left: 0; }
-  .sector-index { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  /* Architecture leads full width, the other four sectors sit below it. */
+  .sector-index { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .sector-index a:first-child { grid-column: 1 / -1; }
+  .sector-index a:first-child img { aspect-ratio: 21 / 9; }
   .spec-layout { grid-template-columns: 1fr; }
   .spec-layout .head { position: static; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px 64px; align-items: end; }
   .spec-layout .head h2 { margin: 0; }
@@ -392,7 +395,7 @@ p:last-child { margin-bottom: 0; }
   .spec-pair { grid-template-columns: 1fr; gap: 32px; }
   .spec-table th { width: 42%; }
   .sector-index { grid-template-columns: 1fr 1fr; gap: 12px; }
-  .sector-index a:last-child { grid-column: 1 / -1; }
+  .sector-index a:first-child img { aspect-ratio: 16 / 9; }
   .sector-index span:not(.sector-thumb) { font-size: 1.2rem; }
   .use, .use:nth-child(even) { grid-template-columns: 1fr; grid-template-areas: "title" "text" "pair"; }
   .use p { margin-bottom: 20px; }
