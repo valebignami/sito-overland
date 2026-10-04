@@ -208,14 +208,15 @@ p:last-child { margin-bottom: 0; }
 .props p { color: var(--muted); font-size: 1rem; line-height: 1.5; }
 .tablist { display: none; }
 .finish-tabs.is-enhanced .tablist { display: flex; gap: 8px; margin-bottom: 36px; }
-.tab { min-height: 56px; padding: 10px 28px; border: 1px solid var(--line); background: transparent; font: 500 1.7rem/1 var(--font-display); }
-.tab:hover { border-color: var(--ink); }
-.tab[aria-selected="true"] { background: var(--ink); border-color: var(--ink); color: white; }
+/* Finish tabs and the finish card sit on the page as white, softly shadowed pieces, rounded like the photos. */
+.tab { min-height: 56px; padding: 10px 28px; border: 1px solid #d3d6d0; border-radius: var(--radius); background: #fff; box-shadow: 0 1px 2px rgb(30 34 32 / .06), 0 6px 16px rgb(30 34 32 / .08); font: 500 1.7rem/1 var(--font-display); transition: box-shadow 160ms, border-color 160ms; }
+.tab:hover { border-color: var(--ink); box-shadow: 0 1px 2px rgb(30 34 32 / .08), 0 10px 22px rgb(30 34 32 / .12); }
+.tab[aria-selected="true"] { background: var(--ink); border-color: var(--ink); color: white; box-shadow: 0 1px 2px rgb(30 34 32 / .12), 0 8px 20px rgb(30 34 32 / .18); }
 .tab-panel { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr); gap: clamp(28px, 4vw, 56px); align-items: start; }
 .tab-panel + .tab-panel { margin-top: 64px; }
 .is-enhanced .tab-panel + .tab-panel { margin-top: 0; }
 .tab-panel:focus-visible { outline-offset: 8px; }
-.tab-finish { position: sticky; top: 104px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.tab-finish { position: sticky; top: 104px; background: #fff; border: 1px solid #d3d6d0; border-radius: var(--radius); overflow: hidden; box-shadow: 0 1px 3px rgb(30 34 32 / .06), 0 14px 36px rgb(30 34 32 / .12); }
 .tab-finish > img { width: 100%; aspect-ratio: 1; object-fit: cover; object-position: 50% 0; border-bottom: 1px solid var(--line); }
 .tab-finish figcaption { padding: 22px 24px 24px; }
 .tab-finish h3 { font-size: 2.1rem; margin-bottom: 4px; }
