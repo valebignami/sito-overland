@@ -1,34 +1,44 @@
           <div class="line-scroll" tabindex="0" role="region" aria-label="Continuous anodizing process diagram">
           <svg class="line-svg" viewBox="0 0 1200 350" role="img" aria-labelledby="line-desc">
             <desc id="line-desc">The continuous anodizing line: a raw coil unwinds, the strip dips into five baths in turn (cleaning and etching as pre-treatment, anodizing, then colouring and sealing as post-treatment) and is rewound as an anodized coil.</desc>
+            <defs>
+              <linearGradient id="ls-tank" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfcfb"/><stop offset="1" stop-color="#e6eae9"/></linearGradient>
+              <linearGradient id="ls-liquid" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9ecee"/><stop offset="1" stop-color="#d2d7da"/></linearGradient>
+              <linearGradient id="ls-liquid-key" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fcecec"/><stop offset="1" stop-color="#f2c9c7"/></linearGradient>
+              <radialGradient id="ls-roll" cx=".38" cy=".35" r=".75"><stop offset="0" stop-color="#fbfcfc"/><stop offset=".6" stop-color="#d4d9dc"/><stop offset="1" stop-color="#aab1b5"/></radialGradient>
+              <filter id="ls-blur" x="-30%" y="-300%" width="160%" height="700%"><feGaussianBlur stdDeviation="6"/></filter>
+              <path id="ls-strip" d="M110 102 L210 62 L290 222 L370 62 L450 222 L530 62 L610 222 L690 62 L770 222 L850 62 L930 222 L1010 62 L1090 102"/>
+            </defs>
+            <!-- soft shadows under the baths and the coils -->
+            <g class="shadow">
+              <ellipse cx="110" cy="230" rx="52" ry="6"/><ellipse cx="1090" cy="230" rx="52" ry="6"/>
+              <ellipse cx="290" cy="258" rx="58" ry="6"/><ellipse cx="450" cy="258" rx="58" ry="6"/><ellipse cx="610" cy="258" rx="58" ry="6"/>
+              <ellipse cx="770" cy="258" rx="58" ry="6"/><ellipse cx="930" cy="258" rx="58" ry="6"/>
+            </g>
             <!-- baths: empty top, liquid below -->
-            <g class="baths">
-              <g><rect class="bath" x="230" y="110" width="120" height="140" rx="10"/><rect class="liquid" x="231" y="138" width="118" height="111" rx="9"/></g>
-              <g><rect class="bath" x="390" y="110" width="120" height="140" rx="10"/><rect class="liquid" x="391" y="138" width="118" height="111" rx="9"/></g>
-              <g class="key"><rect class="bath" x="550" y="110" width="120" height="140" rx="10"/><rect class="liquid" x="551" y="138" width="118" height="111" rx="9"/></g>
-              <g><rect class="bath" x="710" y="110" width="120" height="140" rx="10"/><rect class="liquid" x="711" y="138" width="118" height="111" rx="9"/></g>
-              <g><rect class="bath" x="870" y="110" width="120" height="140" rx="10"/><rect class="liquid" x="871" y="138" width="118" height="111" rx="9"/></g>
+            <g>
+              <g><rect class="bath" x="230" y="110" width="120" height="140" rx="10"/><rect class="liquid" x="234" y="138" width="112" height="108" rx="7"/></g>
+              <g><rect class="bath" x="390" y="110" width="120" height="140" rx="10"/><rect class="liquid" x="394" y="138" width="112" height="108" rx="7"/></g>
+              <g class="key"><rect class="bath" x="550" y="110" width="120" height="140" rx="10"/><rect class="liquid" x="554" y="138" width="112" height="108" rx="7"/></g>
+              <g><rect class="bath" x="710" y="110" width="120" height="140" rx="10"/><rect class="liquid" x="714" y="138" width="112" height="108" rx="7"/></g>
+              <g><rect class="bath" x="870" y="110" width="120" height="140" rx="10"/><rect class="liquid" x="874" y="138" width="112" height="108" rx="7"/></g>
             </g>
             <!-- coils -->
-            <g class="coil" transform="translate(110 160)">
-              <circle r="58"/><circle r="46"/><circle r="36"/><circle r="26"/><circle class="hub" r="14"/><circle class="axle" r="5"/>
+            <g transform="translate(110 160)">
+              <circle class="roll" r="58"/><g class="rings"><circle r="46"/><circle r="36"/><circle r="26"/></g><circle class="hub" r="14"/><circle class="axle" r="5"/>
             </g>
-            <g class="coil" transform="translate(1090 160)">
-              <circle r="58"/><circle r="46"/><circle r="36"/><circle r="26"/><circle class="hub" r="14"/><circle class="axle" r="5"/>
+            <g transform="translate(1090 160)">
+              <circle class="roll" r="58"/><g class="rings"><circle r="46"/><circle r="36"/><circle r="26"/></g><circle class="hub" r="14"/><circle class="axle" r="5"/>
             </g>
-            <!-- the strip: over a top roller, down into each bath and back up -->
-            <path class="strip-path" d="M110 102 L210 62 L290 222 L370 62 L450 222 L530 62 L610 222 L690 62 L770 222 L850 62 L930 222 L1010 62 L1090 102"/>
+            <path class="turn" d="M60 205A62 62 0 0 0 150 214"/><path class="turn" d="M1050 214A62 62 0 0 0 1140 205"/>
+            <!-- the strip: satin metal, over a top roller, down into each bath and back up -->
+            <use href="#ls-strip" class="strip"/>
+            <use href="#ls-strip" class="strip strip-light"/>
             <g class="rollers">
-              <circle cx="210" cy="62" r="9"/><circle cx="370" cy="62" r="9"/><circle cx="530" cy="62" r="9"/>
-              <circle cx="690" cy="62" r="9"/><circle cx="850" cy="62" r="9"/><circle cx="1010" cy="62" r="9"/>
-              <circle cx="290" cy="222" r="9"/><circle cx="450" cy="222" r="9"/><circle cx="610" cy="222" r="9"/>
-              <circle cx="770" cy="222" r="9"/><circle cx="930" cy="222" r="9"/>
-            </g>
-            <g class="roller-dots">
-              <circle cx="210" cy="62" r="3"/><circle cx="370" cy="62" r="3"/><circle cx="530" cy="62" r="3"/>
-              <circle cx="690" cy="62" r="3"/><circle cx="850" cy="62" r="3"/><circle cx="1010" cy="62" r="3"/>
-              <circle cx="290" cy="222" r="3"/><circle cx="450" cy="222" r="3"/><circle cx="610" cy="222" r="3"/>
-              <circle cx="770" cy="222" r="3"/><circle cx="930" cy="222" r="3"/>
+              <circle cx="210" cy="62" r="5.75"/><circle cx="370" cy="62" r="5.75"/><circle cx="530" cy="62" r="5.75"/>
+              <circle cx="690" cy="62" r="5.75"/><circle cx="850" cy="62" r="5.75"/><circle cx="1010" cy="62" r="5.75"/>
+              <circle cx="290" cy="222" r="5.75"/><circle cx="450" cy="222" r="5.75"/><circle cx="610" cy="222" r="5.75"/>
+              <circle cx="770" cy="222" r="5.75"/><circle cx="930" cy="222" r="5.75"/>
             </g>
             <!-- labels -->
             <g class="labels">

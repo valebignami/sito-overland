@@ -29,7 +29,7 @@ img, video { display: block; max-width: 100%; height: auto; }
 figure, dl, dd { margin: 0; }
 a { color: inherit; text-underline-offset: 4px; text-decoration-thickness: 1px; }
 button { font: inherit; color: inherit; cursor: pointer; }
-svg:not(.line-svg):not(.method-diagram) { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.5; flex: 0 0 auto; }
+.icon { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.5; flex: 0 0 auto; }
 h1, h2, h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.02; margin: 0; letter-spacing: -.02em; text-wrap: balance; }
 h1 { font-size: clamp(3rem, 5.6vw, 5.4rem); }
 h2 { font-size: clamp(2.4rem, 3.7vw, 3.8rem); }
@@ -135,81 +135,71 @@ p:last-child { margin-bottom: 0; }
 .mosaic .m-main img { aspect-ratio: 4 / 5; }
 .mosaic .m-side img { aspect-ratio: 4 / 3; }
 
-/* Technology: line diagram and steps */
+/* Technology: line diagram, drawn as in the brochure (grey strip band, dark rollers, light tanks) with soft shadows */
 .line-figure { background: var(--paper); padding: clamp(20px, 3vw, 44px); border-radius: var(--radius); }
 .line-scroll { overflow-x: auto; }
 .line-svg { display: block; width: 100%; min-width: 760px; height: auto; }
-.line-svg .bath { fill: #eceeea; stroke: #7a807b; stroke-width: 2; }
-.line-svg .liquid { fill: #c9d0cf; }
+.line-svg .shadow { fill: #000; opacity: .14; filter: url(#ls-blur); }
+.line-svg .bath { fill: url(#ls-tank); stroke: var(--line); stroke-width: 1.5; }
+.line-svg .liquid { fill: url(#ls-liquid); }
 .line-svg .key .bath { stroke: var(--red); }
-.line-svg .key .liquid { fill: #eeb3b0; }
-.line-svg .coil circle { fill: none; stroke: var(--ink); stroke-width: 2; }
-.line-svg .hub { fill: var(--paper); }
+.line-svg .key .liquid { fill: url(#ls-liquid-key); }
+.line-svg .roll { fill: url(#ls-roll); }
+.line-svg .rings { fill: none; stroke: #fff; stroke-opacity: .7; stroke-width: 1.2; }
+.line-svg .hub { fill: #fff; }
 .line-svg .axle { fill: var(--ink); }
-.line-svg .strip-path { fill: none; stroke: var(--ink); stroke-width: 5; stroke-linejoin: round; }
-.line-svg .rollers circle { fill: var(--paper); stroke: var(--ink); stroke-width: 2; }
-.line-svg .roller-dots circle { fill: var(--ink); }
+.line-svg .turn { fill: none; stroke: #7a807b; stroke-width: 1.5; stroke-linecap: round; }
+.line-svg .strip { fill: none; stroke: #aab1b5; stroke-width: 8; stroke-linejoin: round; }
+.line-svg .strip-light { stroke: #eef1f2; stroke-width: 3.5; }
+.line-svg .rollers { fill: #fff; stroke: var(--ink); stroke-width: 6.5; }
 .line-svg text { fill: var(--ink); font: 500 18px var(--font-body); }
 .line-svg .labels text, .line-svg .phases text { text-anchor: middle; }
+.line-svg .labels text:not(.end) { font-weight: 600; }
+.line-svg .labels text.end { fill: var(--muted); }
 .line-svg .phases path { fill: none; stroke: #7a807b; stroke-width: 1; }
 .line-svg .phases text { font-size: 13px; letter-spacing: .08em; }
 .line-svg .key text, .line-svg text.key { fill: var(--red); }
-.line-svg .guides { fill: none; stroke: #7a807b; }
 .line-caption { margin: 16px 0 0; font-size: 1rem; color: var(--muted); }
-.steps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; margin: 40px 0 0; padding: 0; list-style: none; counter-reset: step; }
-.steps li { counter-increment: step; padding: 22px 22px 0 0; border-top: 2px solid var(--ink); }
-.steps li + li { padding-left: 22px; }
-.steps li::before { content: counter(step, decimal-leading-zero); display: block; margin-bottom: 14px; font: 500 1.1rem/1 var(--font-display); color: var(--muted); }
-.steps .is-key { border-top: 4px solid var(--red); margin-top: -2px; padding: 22px 26px 30px; background: var(--paper); }
+/* The step list supports the diagram: small names, little space. */
+.steps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; margin: 24px 0 0; padding: 0; list-style: none; counter-reset: step; }
+.steps li { counter-increment: step; padding: 14px 18px 0 0; border-top: 2px solid var(--ink); }
+.steps li + li { padding-left: 18px; }
+.steps li::before { content: counter(step, decimal-leading-zero); display: block; margin-bottom: 8px; font: 500 .95rem/1 var(--font-display); color: var(--muted); }
+.steps .is-key { border-top: 4px solid var(--red); margin-top: -2px; padding: 14px 20px 16px; background: var(--paper); }
 .steps .is-key::before, .steps .is-key strong { color: var(--red); }
-.steps strong { display: block; margin-bottom: 8px; font: 500 1.6rem/1.1 var(--font-display); }
-.steps span { display: block; font-size: 1rem; color: var(--muted); line-height: 1.5; }
+.steps strong { display: block; margin-bottom: 6px; font: 500 1.3rem/1.1 var(--font-display); }
+.steps span { display: block; font-size: .95rem; color: var(--muted); line-height: 1.5; }
 
-/* Technology: coil or batch, read row by row */
-.method-diagram { display: block; width: 100%; max-width: 300px; height: auto; fill: none; stroke: currentColor; stroke-width: 2; }
-.col-coil .method-diagram { color: var(--red); }
-.method-diagram .diagram-strip { stroke-width: 5; stroke-linejoin: round; }
-.method-diagram .diagram-rack { stroke-width: 4; }
-.method-diagram .diagram-parts { stroke-width: 3; }
-
-/* Coil or batch: the two methods side by side, a process drawing heading each column, one row per fact. */
-.vs { display: grid; grid-template-columns: minmax(120px, .55fr) minmax(0, 1fr) minmax(0, 1fr); gap: 8px; margin-top: clamp(32px, 4vw, 56px); }
-.vs-head { padding: clamp(24px, 2.6vw, 36px) clamp(20px, 2.4vw, 36px) clamp(18px, 2vw, 24px); }
-.vs-head--coil { background: var(--graphite); color: #fff; }
-.vs-head--batch { background: var(--stone); }
-.vs-head h3 { font-size: clamp(1.9rem, 2.6vw, 2.5rem); line-height: 1; }
-.vs-head--coil h3 { color: #fff; }
-.vs-tag { margin: 6px 0 0; font-size: .95rem; font-weight: 600; color: #ff6a6f; }
-.vs-how { margin: 10px 0 0; font-size: 1rem; line-height: 1.5; }
-.vs-head--coil .vs-how { color: rgb(255 255 255 / .78); }
-.vs-head--batch .vs-how { color: var(--muted); }
-.vs-head--batch .vs-how { margin-top: calc(10px + 1.5em + 6px); }
-.vs svg.lane-svg { display: block; width: 100%; height: auto; margin-top: 20px; overflow: visible; fill: none; stroke-linecap: round; stroke-linejoin: round; }
-.vs .lane-tanks { stroke: currentColor; stroke-width: 3; opacity: .45; }
-.vs .lane-strip { stroke: var(--red); stroke-width: 7; }
-.vs .lane-coil { stroke: var(--red); stroke-width: 4; }
-.vs .lane-rail, .vs .lane-parts path { stroke: var(--muted); stroke-width: 4; }
-.vs .lane-parts rect { stroke: var(--muted); stroke-width: 4; fill: var(--stone); }
-.vs .lane-move { stroke: var(--muted); stroke-width: 3; stroke-dasharray: 3 10; }
-.vs .lane-text { fill: currentColor; stroke: none; font: 500 26px var(--font-body); opacity: .7; }
-.vs-label { display: flex; align-items: center; padding: 18px 4px; border-top: 2px solid var(--ink); font: 500 clamp(1.3rem, 1.7vw, 1.6rem)/1.15 var(--font-display); }
-.vs-cell { display: flex; align-items: center; margin: 0; padding: 18px clamp(20px, 2.4vw, 36px); font-size: 1.05rem; line-height: 1.5; }
-.vs-cell--coil { background: var(--graphite); color: #fff; font-weight: 600; }
-.vs-cell--batch { background: var(--stone); color: var(--muted); }
-.vs-cell span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
-@media (prefers-reduced-motion: no-preference) {
-  .vs .lane-strip { stroke-dasharray: 3200; stroke-dashoffset: 3200; animation: vs-draw 2.4s cubic-bezier(.2, .7, .2, 1) .2s forwards; }
-  @keyframes vs-draw { to { stroke-dashoffset: 0; } }
-}
-@media (max-width: 899px) {
-  .vs { grid-template-columns: 1fr 1fr; gap: 6px; }
-  .vs-spacer { display: none; }
-  .vs-head { padding: 18px 16px; }
-  .vs-head h3 { font-size: 1.6rem; }
-  .vs-how, .vs-head--batch .vs-how { display: none; }
-  .vs .lane-text { display: none; }
-  .vs-label { grid-column: 1 / -1; margin-top: 14px; padding: 10px 0 2px; }
-  .vs-cell { align-items: flex-start; padding: 14px 16px; font-size: .95rem; }
+/* Technology: coil or batch. Each difference is drawn as the surface you receive, in soft satin metal;
+   both methods are styled alike, so neither reads as the right or wrong answer. */
+.cb { display: grid; grid-template-columns: minmax(110px, .4fr) minmax(0, 1fr) minmax(0, 1fr); column-gap: clamp(12px, 1.6vw, 20px); margin-top: clamp(32px, 4vw, 56px); }
+.cb-head { padding: 0 0 20px; border-bottom: 2px solid var(--ink); }
+.cb-head h3 { font-size: clamp(1.9rem, 2.6vw, 2.5rem); line-height: 1; }
+.cb-head p { margin: 10px 0 0; max-width: 36ch; font-size: 1rem; line-height: 1.5; color: var(--muted); }
+.cb-head .cb-tag { margin-top: 6px; font-size: .95rem; font-weight: 600; }
+.cb-label { margin: 0; padding: 22px 0; border-bottom: 1px solid var(--line); font: 500 clamp(1.3rem, 1.7vw, 1.6rem)/1.15 var(--font-display); }
+.cb-cell { margin: 0; padding: 20px 0 22px; border-bottom: 1px solid var(--line); font-size: 1.05rem; line-height: 1.5; }
+.cb-cell > svg { display: block; width: 100%; max-width: 360px; height: auto; margin-bottom: 10px; }
+.cb-silver { fill: url(#cb-silver); }
+.cb-silver-roll { fill: url(#cb-silver-roll); }
+.cb-gold-l { fill: url(#cb-gold-l); }
+.cb-gold-m { fill: url(#cb-gold-m); }
+.cb-gold-d { fill: url(#cb-gold-d); }
+.cb-gold-roll { fill: url(#cb-gold-roll); }
+.cb-shadow { fill: #000; opacity: .16; filter: url(#cb-blur); }
+.cb-rings { fill: none; stroke: #fff; stroke-opacity: .65; stroke-width: 1; }
+.cb-core { fill: var(--paper); }
+.cb-rail { fill: none; stroke: #7a807b; stroke-width: 2; stroke-linecap: round; }
+.cb-mark { fill: var(--ink); }
+.cb-halo { fill: var(--ink); opacity: .12; }
+@media (max-width: 700px) {
+  .cb { grid-template-columns: 1fr 1fr; column-gap: 14px; }
+  .cb-corner { display: none; }
+  .cb-head { padding-bottom: 14px; }
+  .cb-head h3 { font-size: 1.6rem; }
+  .cb-head p:not(.cb-tag) { display: none; }
+  .cb-label { grid-column: 1 / -1; padding: 18px 0 0; border-bottom: 0; }
+  .cb-cell { padding: 10px 0 18px; font-size: .95rem; }
 }
 
 /* Products */

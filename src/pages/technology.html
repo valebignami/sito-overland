@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
 <!-- include:head -->
-  <link rel="stylesheet" href="assets/css/technology.css">
   <title>Technology | Overland Anodized Aluminium</title>
   <meta name="description" content="How continuous coil anodizing works: cleaning, etching, anodizing, colouring and sealing on automated lines, with no rack marks and consistent colour.">
 </head>
@@ -27,7 +26,7 @@
           <p>The coil unwinds at one end of the line and is rewound at the other. In between it passes through every bath without stopping, never clamped or racked.</p>
         </div>
         <figure class="line-figure">
-<!-- include:line-svg-soft -->
+<!-- include:line-svg -->
           <figcaption class="line-caption">Coil to coil: no hanging marks, a uniform surface.</figcaption>
         </figure>
         <ol class="steps">
@@ -48,19 +47,28 @@
         </div>
         <div class="cb">
           <div class="cb-corner" aria-hidden="true"></div>
-          <div class="cb-head cb-head--coil">
+          <div class="cb-head">
             <h3>Continuous coil</h3>
             <p class="cb-tag">How Overland works</p>
             <p>The whole coil moves through all baths on one line.</p>
           </div>
-          <div class="cb-head cb-head--batch">
+          <div class="cb-head">
             <h3>Batch</h3>
             <p>Parts or sheets hang from racks and are dipped tank by tank.</p>
           </div>
 
           <h4 class="cb-label">Surface</h4>
-          <figure class="cb-cell cb-cell--coil">
+          <figure class="cb-cell">
             <svg viewBox="0 0 320 120" role="img" aria-label="An aluminium coil unrolling into a flat strip with an even surface and no marks">
+              <defs>
+                <linearGradient id="cb-silver" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4f6f7"/><stop offset=".55" stop-color="#dde1e3"/><stop offset="1" stop-color="#c3c9cc"/></linearGradient>
+                <radialGradient id="cb-silver-roll" cx=".38" cy=".35" r=".75"><stop offset="0" stop-color="#fbfcfc"/><stop offset=".6" stop-color="#d4d9dc"/><stop offset="1" stop-color="#b1b8bc"/></radialGradient>
+                <linearGradient id="cb-gold-l" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4ead0"/><stop offset="1" stop-color="#e0cc9c"/></linearGradient>
+                <linearGradient id="cb-gold-m" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eadbb2"/><stop offset="1" stop-color="#cdb27a"/></linearGradient>
+                <linearGradient id="cb-gold-d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d6bd86"/><stop offset="1" stop-color="#a98a52"/></linearGradient>
+                <radialGradient id="cb-gold-roll" cx=".38" cy=".35" r=".75"><stop offset="0" stop-color="#f6edd3"/><stop offset=".6" stop-color="#dcc590"/><stop offset="1" stop-color="#b9995e"/></radialGradient>
+                <filter id="cb-blur" x="-20%" y="-200%" width="140%" height="500%"><feGaussianBlur stdDeviation="3.5"/></filter>
+              </defs>
               <ellipse class="cb-shadow" cx="180" cy="104" rx="132" ry="4"/>
               <path class="cb-silver" d="M56 96H300L286 72H56Z"/>
               <circle class="cb-silver-roll" cx="56" cy="62" r="34"/>
@@ -69,7 +77,7 @@
             </svg>
             <figcaption><span class="visually-hidden">Coil: </span>No contact or hanging marks.</figcaption>
           </figure>
-          <figure class="cb-cell cb-cell--batch">
+          <figure class="cb-cell">
             <svg viewBox="0 0 320 120" role="img" aria-label="A sheet hanging from a rack by two hooks, with a mark where each hook holds it">
               <ellipse class="cb-shadow" cx="160" cy="114" rx="56" ry="3"/>
               <path class="cb-rail" d="M80 12H240M132 12V30M188 12V30"/>
@@ -81,7 +89,7 @@
           </figure>
 
           <h4 class="cb-label">Colour</h4>
-          <figure class="cb-cell cb-cell--coil">
+          <figure class="cb-cell">
             <svg viewBox="0 0 320 120" role="img" aria-label="A gold coil unrolling into a flat strip, the same shade from one end to the other">
               <ellipse class="cb-shadow" cx="180" cy="104" rx="132" ry="4"/>
               <path class="cb-gold-m" d="M56 96H300L286 72H56Z"/>
@@ -91,9 +99,9 @@
             </svg>
             <figcaption><span class="visually-hidden">Coil: </span>Consistent along the coil and between runs.</figcaption>
           </figure>
-          <figure class="cb-cell cb-cell--batch">
+          <figure class="cb-cell">
             <svg viewBox="0 0 320 120" role="img" aria-label="Three gold sheets from different batches, each a slightly different shade">
-              <ellipse class="cb-shadow" cx="64" cy="102" rx="40" ry="3"/><ellipse class="cb-shadow" cx="160" cy="102" rx="40" ry="3"/><ellipse class="cb-shadow" cx="256" cy="102" rx="40" ry="3"/>
+              <g class="cb-shadow"><ellipse cx="64" cy="102" rx="40" ry="3"/><ellipse cx="160" cy="102" rx="40" ry="3"/><ellipse cx="256" cy="102" rx="40" ry="3"/></g>
               <rect class="cb-gold-l" x="22" y="30" width="84" height="66" rx="2"/>
               <rect class="cb-gold-d" x="118" y="30" width="84" height="66" rx="2"/>
               <rect class="cb-gold-m" x="214" y="30" width="84" height="66" rx="2"/>
@@ -102,20 +110,9 @@
           </figure>
 
           <h4 class="cb-label">Resources</h4>
-          <p class="cb-cell cb-cell--coil cb-text"><span class="visually-hidden">Coil: </span>Fewer chemicals, less water and energy. An efficient line keeps production costs down.</p>
-          <p class="cb-cell cb-cell--batch cb-text"><span class="visually-hidden">Batch: </span>More chemicals, water and energy, plus racking and handling for each batch.</p>
+          <p class="cb-cell"><span class="visually-hidden">Coil: </span>Fewer chemicals, less water and energy. An efficient line keeps production costs down.</p>
+          <p class="cb-cell"><span class="visually-hidden">Batch: </span>More chemicals, water and energy, plus racking and handling for each batch.</p>
         </div>
-        <svg class="cb-defs" aria-hidden="true" focusable="false">
-          <defs>
-            <linearGradient id="cb-silver" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4f6f7"/><stop offset=".55" stop-color="#dde1e3"/><stop offset="1" stop-color="#c3c9cc"/></linearGradient>
-            <radialGradient id="cb-silver-roll" cx=".38" cy=".35" r=".75"><stop offset="0" stop-color="#fbfcfc"/><stop offset=".6" stop-color="#d4d9dc"/><stop offset="1" stop-color="#b1b8bc"/></radialGradient>
-            <linearGradient id="cb-gold-l" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4ead0"/><stop offset="1" stop-color="#e0cc9c"/></linearGradient>
-            <linearGradient id="cb-gold-m" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eadbb2"/><stop offset="1" stop-color="#cdb27a"/></linearGradient>
-            <linearGradient id="cb-gold-d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d6bd86"/><stop offset="1" stop-color="#a98a52"/></linearGradient>
-            <radialGradient id="cb-gold-roll" cx=".38" cy=".35" r=".75"><stop offset="0" stop-color="#f6edd3"/><stop offset=".6" stop-color="#dcc590"/><stop offset="1" stop-color="#b9995e"/></radialGradient>
-            <filter id="cb-blur" x="-20%" y="-200%" width="140%" height="500%"><feGaussianBlur stdDeviation="3.5"/></filter>
-          </defs>
-        </svg>
       </div>
     </section>
   </main>
