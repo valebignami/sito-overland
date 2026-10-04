@@ -95,6 +95,12 @@ p:last-child { margin-bottom: 0; }
 .hero-statement .btn-white:focus-visible { outline-color: white; }
 .hero-film { position: relative; background: var(--graphite); }
 .hero-film video { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+/* Play/pause as a small round icon in the bottom-left corner, the one spot the words in the film never reach; the text stays for screen readers. */
+.video-toggle { position: absolute; left: 16px; bottom: 16px; display: grid; place-items: center; width: 40px; height: 40px; padding: 0; border: 1px solid rgb(255 255 255 / .6); border-radius: 50%; font-size: 0; color: white; background: rgb(30 34 32 / .5); }
+.video-toggle:hover { background: var(--red); border-color: var(--red); }
+.video-toggle:focus-visible { outline-color: white; }
+.video-toggle::before { content: ""; box-sizing: border-box; width: 12px; height: 13px; border-inline: 4px solid white; }
+.video-toggle[aria-pressed="false"]::before { width: 0; height: 0; margin-left: 4px; border: 7px solid transparent; border-right: 0; border-left: 11px solid white; }
 
 /* Home blocks */
 .sector-links { margin-top: 28px; border-bottom: 1px solid var(--line); }
@@ -366,6 +372,7 @@ p:last-child { margin-bottom: 0; }
   .hero-statement h1 { font-size: clamp(2.1rem, 9vw, 2.5rem); }
   .hero-intro p { font-size: 1rem; line-height: 1.45; margin-bottom: 10px; }
   .hero-statement .btn { min-height: 40px; padding: 6px 14px; gap: 10px; font-size: .9rem; }
+  .video-toggle { left: 8px; bottom: 8px; width: 32px; height: 32px; }
   .sector-links a { font-size: 1.25rem; }
   .facts-band { grid-template-columns: 1fr 1fr; row-gap: 0; }
   .facts-band div, .facts-band div + div { padding: 20px 16px 20px 0; border-left: 0; border-bottom: 1px solid var(--line); }
