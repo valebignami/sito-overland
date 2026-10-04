@@ -72,7 +72,7 @@ p:last-child { margin-bottom: 0; }
 .text-link svg { transition: transform 160ms; }
 .text-link:hover { color: var(--red); }
 .text-link:hover svg { transform: translateX(4px); }
-.split-copy .text-link { margin-top: 28px; }
+.split-copy .text-link, .split-copy .btn { margin-top: 28px; }
 
 /* Header */
 .site-header { position: sticky; top: 0; z-index: 50; background: rgb(246 246 243 / .96); border-bottom: 1px solid var(--line); backdrop-filter: blur(6px); }
@@ -236,11 +236,8 @@ p:last-child { margin-bottom: 0; }
 .imp { font-weight: 400; color: var(--muted); }
 .spec-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; margin-top: 44px; }
 .spec-note { margin-top: 28px; font-size: 1rem; color: var(--muted); }
-.brochure { display: grid; grid-template-columns: minmax(0, auto) auto; justify-content: start; gap: clamp(40px, 6vw, 96px); align-items: center; }
-.brochure-cover img { display: block; width: clamp(150px, 14vw, 200px); height: auto; border-radius: 2px; box-shadow: 0 2px 4px rgba(0, 0, 0, .08), 0 14px 32px rgba(0, 0, 0, .16); }
-.brochure h2 { margin-bottom: 14px; }
-.brochure p { max-width: 42ch; color: var(--muted); }
-.brochure .btn { margin-top: 24px; }
+.brochure { grid-template-columns: minmax(0, 24rem) auto; justify-content: start; }
+.split .brochure-cover img { width: clamp(150px, 14vw, 200px); border-radius: 2px; box-shadow: 0 1px 3px rgb(30 34 32 / .08), 0 14px 32px rgb(30 34 32 / .16); }
 .brochure-meta { display: block; margin-top: 10px; font-size: .95rem; color: var(--muted); }
 
 /* Applications */
@@ -353,6 +350,7 @@ p:last-child { margin-bottom: 0; }
   .split, .split--flip { grid-template-columns: 1fr; }
   /* Heading and text first, photo after, in every split section. */
   .split > figure { order: 1; }
+  .split .brochure-cover img { width: 120px; }
   .page-hero { min-height: 480px; align-items: flex-end; }
   .page-hero::before { background: linear-gradient(0deg, rgb(12 14 13 / .82) 0%, rgb(12 14 13 / .55) 60%, rgb(12 14 13 / .25) 100%); }
   .mosaic { grid-template-columns: 1fr 1fr; }
@@ -456,4 +454,3 @@ p:last-child { margin-bottom: 0; }
 .res-cards h3 { margin-bottom: 10px; font-size: 1.55rem; }
 .res-cards p { color: var(--muted); font-size: 1rem; line-height: 1.5; }
 @media (max-width: 899px) { .res-cards { grid-template-columns: 1fr; gap: 12px; } }
-@media (max-width: 899px) { .brochure { grid-template-columns: 1fr; gap: 32px; } .brochure-cover { justify-self: start; } .brochure-cover img { width: 120px; } }

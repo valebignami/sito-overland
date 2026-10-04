@@ -2,13 +2,16 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "node tools/build.mjs",
   "outputDirectory": "public",
-  "framework": null,
-  "installCommand": "",
   "headers": [
     {
       "source": "/(.*)",
       "has": [{ "type": "host", "value": ".*\\.vercel\\.app" }],
       "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+    },
+    {
+      "source": "/assets/(css|js)/(.*)",
+      "has": [{ "type": "query", "key": "v" }],
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }]
     }
   ]
 }

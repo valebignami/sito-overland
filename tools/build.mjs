@@ -52,9 +52,9 @@ rmSync(out, { recursive: true, force: true });
 mkdirSync(out, { recursive: true });
 cpSync(join(root, 'assets'), join(out, 'assets'), { recursive: true });
 
-// Stylesheet and script get a content hash in their URL, so browsers fetch the new file after each publish
-const version = (path) => createHash('sha1').update(readFileSync(join(root, path))).digest('hex').slice(0, 8);
-const versioned = { 'assets/css/site.css': version('assets/css/site.css'), 'assets/js/site.js': version('assets/js/site.js') };
+// {{v:path}} becomes path?v=<content hash>, so browsers fetch the new file after each publish
+const hashes = {};
+const versioned = (path) => `${path}?v=${hashes[path] ??= createHash('sha1').update(readFileSync(join(root, path))).digest('hex').slice(0, 8)}`;
 
 for (const file of readdirSync(join(root, 'src/pages')).filter((f) => f.endsWith('.html'))) {
   const page = basename(file, '.html');
@@ -62,7 +62,7 @@ for (const file of readdirSync(join(root, 'src/pages')).filter((f) => f.endsWith
   html = html.replace(/<!-- include:([\w-]+) -->/g, (_, name) => partial(name));
   // Mark the current page in the navigation
   html = html.replace(new RegExp(`data-page="${page}"`, 'g'), `data-page="${page}" aria-current="page"`);
-  for (const [path, v] of Object.entries(versioned)) html = html.split(`"${path}"`).join(`"${path}?v=${v}"`);
+  html = html.replace(/\{\{v:([^}]+)\}\}/g, (_, path) => versioned(path));
   writeFileSync(join(out, file), html);
   console.log('built', file);
 }
