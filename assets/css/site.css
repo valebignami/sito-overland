@@ -238,8 +238,11 @@ p:last-child { margin-bottom: 0; }
 .imp { font-weight: 400; color: var(--muted); }
 .spec-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; margin-top: 44px; }
 .spec-note { margin-top: 28px; font-size: 1rem; color: var(--muted); }
-.brochure { grid-template-columns: minmax(0, 24rem) auto; justify-content: start; }
-.split .brochure-cover img { width: clamp(150px, 14vw, 200px); border-radius: 2px; box-shadow: 0 1px 3px rgb(30 34 32 / .08), 0 14px 32px rgb(30 34 32 / .16); }
+/* Brochure: title, cover, then the download button underneath */
+.brochure { display: flex; flex-direction: column; align-items: flex-start; }
+.brochure h2 { margin-bottom: 32px; }
+.brochure-cover img { width: clamp(150px, 14vw, 200px); border-radius: 2px; box-shadow: 0 1px 3px rgb(30 34 32 / .08), 0 14px 32px rgb(30 34 32 / .16); }
+.brochure .btn { margin-top: 36px; }
 .brochure-meta { display: block; margin-top: 10px; font-size: .95rem; color: var(--muted); }
 
 /* Applications */
@@ -352,7 +355,7 @@ p:last-child { margin-bottom: 0; }
   .split, .split--flip { grid-template-columns: 1fr; }
   /* Heading and text first, photo after, in every split section. */
   .split > figure { order: 1; }
-  .split .brochure-cover img { width: 120px; }
+  .brochure-cover img { width: 120px; }
   .page-hero { min-height: 480px; align-items: flex-end; }
   .page-hero::before { background: linear-gradient(0deg, rgb(12 14 13 / .82) 0%, rgb(12 14 13 / .55) 60%, rgb(12 14 13 / .25) 100%); }
   .mosaic { grid-template-columns: 1fr 1fr; }
