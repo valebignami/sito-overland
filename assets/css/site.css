@@ -231,22 +231,12 @@ p:last-child { margin-bottom: 0; }
 .spec-layout { display: grid; grid-template-columns: minmax(0, .75fr) minmax(0, 1.7fr); gap: clamp(40px, 5vw, 80px); align-items: start; }
 .spec-layout .head { display: block; position: sticky; top: 104px; margin: 0; }
 .spec-layout .head h2 { margin-bottom: 20px; }
-/* Products: recycled content band, the figure set large beside the copy */
-.recycled { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 64px; align-items: center; }
-.recycled-figure { margin: 0; font: 500 clamp(5rem, 10vw, 9rem)/.85 var(--font-display); letter-spacing: -.03em; color: var(--red); }
-.recycled-figure span { display: block; font: 600 1.1rem/1.3 var(--font-body); letter-spacing: 0; color: rgb(246 246 243 / .75); }
-.recycled-figure span:first-child { margin-bottom: 12px; }
-.recycled-figure span:last-child { margin-top: 18px; }
-.recycled p:not(.recycled-figure) { max-width: 50ch; margin: 20px 0 0; color: rgb(246 246 243 / .85); }
-.recycled .text-link { margin-top: 28px; }
-/* Version B: recycled metal and solar power as two figures under one heading */
-.recycled-b .head p { color: rgb(246 246 243 / .85); }
-.recycled-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 64px; margin: 0; border-top: 1px solid rgb(246 246 243 / .3); }
-.recycled-facts div { padding-top: 28px; }
-.recycled-facts dt { font: 500 clamp(3.6rem, 6.5vw, 6rem)/.9 var(--font-display); letter-spacing: -.02em; color: var(--red); }
-.recycled-facts dt span { font-size: .45em; letter-spacing: 0; }
-.recycled-facts dd { max-width: 40ch; margin: 14px 0 0; color: rgb(246 246 243 / .85); }
-.recycled-b .text-link { margin-top: clamp(32px, 4vw, 48px); }
+/* Products: recycled content on a dark band, figures sized like the facts band */
+.recycled-section p:not(.recycled-figure), .recycled-section .facts-band dd { color: rgb(246 246 243 / .8); }
+.recycled-section .facts-band div { border-color: rgb(246 246 243 / .2); }
+.recycled-section .facts-band { margin-top: 0; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top-color: rgb(246 246 243 / .45); }
+.recycled-section .text-link { margin-top: 28px; }
+.recycled-figure { margin-bottom: 12px; font: 500 clamp(2rem, 2.8vw, 2.7rem)/1.02 var(--font-display); color: var(--red); }
 .spec-table { width: 100%; border-collapse: collapse; font-size: 1.05rem; }
 .spec-table caption { text-align: left; padding-bottom: 12px; border-bottom: 2px solid var(--ink); font: 500 1.9rem/1.1 var(--font-display); }
 .spec-table th, .spec-table td { text-align: left; vertical-align: top; padding-block: 16px; border-bottom: 1px solid var(--line); }
@@ -368,8 +358,7 @@ p:last-child { margin-bottom: 0; }
   .nav-enhanced .site-nav.is-open { display: flex; max-height: calc(100dvh - 72px); overflow-y: auto; }
   .line-hint { display: block; }
   .hero-statement .wrap { flex-direction: column; align-items: flex-start; }
-  .head, .intro-grid, .spec-layout .head, .recycled { grid-template-columns: 1fr; }
-  .recycled-facts { grid-template-columns: 1fr; }
+  .head, .intro-grid, .spec-layout .head { grid-template-columns: 1fr; }
   .split, .split--flip { grid-template-columns: 1fr; }
   /* Heading and text first, photo after, in every split section. */
   .split > figure { order: 1; }
@@ -396,6 +385,8 @@ p:last-child { margin-bottom: 0; }
   .video-toggle { left: 8px; bottom: 8px; width: 32px; height: 32px; }
   .sector-links a { font-size: 1.25rem; }
   .facts-band { grid-template-columns: 1fr 1fr; row-gap: 0; }
+  .recycled-section .facts-band { grid-template-columns: 1fr; }
+  .recycled-section .facts-band div:nth-child(even) { padding-left: 0; border-left: 0; }
   .facts-band div, .facts-band div + div { padding: 20px 16px 20px 0; border-left: 0; border-bottom: 1px solid var(--line); }
   .facts-band div:nth-child(even) { padding-left: 16px; border-left: 1px solid var(--line); }
   .steps { grid-template-columns: 1fr; row-gap: 0; }
