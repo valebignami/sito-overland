@@ -232,11 +232,10 @@ p:last-child { margin-bottom: 0; }
 .spec-layout .head { display: block; position: sticky; top: 104px; margin: 0; }
 .spec-layout .head h2 { margin-bottom: 20px; }
 /* Products: recycled content on a dark band, figures sized like the facts band */
-.recycled-section p:not(.recycled-figure), .recycled-section .facts-band dd { color: rgb(246 246 243 / .8); }
+.recycled-section p, .recycled-section .facts-band dd { color: rgb(246 246 243 / .8); }
 .recycled-section .facts-band div { border-color: rgb(246 246 243 / .2); }
 .recycled-section .facts-band { margin-top: 0; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top-color: rgb(246 246 243 / .45); }
 .recycled-section .text-link { margin-top: 28px; }
-.recycled-figure { margin-bottom: 12px; font: 500 clamp(2rem, 2.8vw, 2.7rem)/1.02 var(--font-display); color: var(--red); }
 .spec-table { width: 100%; border-collapse: collapse; font-size: 1.05rem; }
 .spec-table caption { text-align: left; padding-bottom: 12px; border-bottom: 2px solid var(--ink); font: 500 1.9rem/1.1 var(--font-display); }
 .spec-table th, .spec-table td { text-align: left; vertical-align: top; padding-block: 16px; border-bottom: 1px solid var(--line); }
