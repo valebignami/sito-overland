@@ -233,7 +233,7 @@ p:last-child { margin-bottom: 0; }
 .spec-layout .head h2 { margin-bottom: 20px; }
 /* Products: recycled content band, the figure set large beside the copy */
 .recycled { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 64px; align-items: center; }
-.recycled-figure { margin: 0; font: 500 clamp(4.5rem, 8vw, 7.5rem)/.85 var(--font-display); letter-spacing: -.03em; color: var(--red); }
+.recycled-figure { margin: 0; font: 500 clamp(7rem, 15vw, 14rem)/.82 var(--font-display); letter-spacing: -.03em; color: var(--red); }
 .recycled-figure span { display: block; font: 600 1.1rem/1.3 var(--font-body); letter-spacing: 0; color: rgb(246 246 243 / .75); }
 .recycled-figure span:first-child { margin-bottom: 12px; }
 .recycled-figure span:last-child { margin-top: 18px; }
