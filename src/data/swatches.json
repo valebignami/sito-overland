@@ -3,14 +3,14 @@
     "mill": {
       "label": "Mill finish",
       "strip": "mill",
-      "image": "assets/img/finish-mill.jpg",
+      "image": "assets/img/swatches/mill-natural-sample.jpg",
       "imageAlt": "Mill finish aluminium surface",
       "desc": "The natural surface of the rolled metal. Raw and industrial."
     },
     "brushed": {
       "label": "Brushed",
       "strip": "brushed",
-      "image": "assets/img/finish-brushed.jpg",
+      "image": "assets/img/swatches/brushed-natural-sample.jpg",
       "imageAlt": "Brushed aluminium surface with a fine linear texture",
       "desc": "A fine linear texture that hides fingerprints and small marks."
     },
@@ -26,143 +26,117 @@
     "mill": [
       {
         "code": "natural",
-        "name": "Natural",
-        "color": "#ddd6d0",
-        "image": "assets/img/swatches/mill-natural.jpg"
+        "name": "Natural silver",
+        "color": "#c0bdbb",
+        "image": "assets/img/swatches/mill-natural.jpg",
+        "sample": "assets/img/swatches/mill-natural-sample.jpg"
+      },
+      {
+        "code": "gold",
+        "name": "Gold",
+        "color": "#d2b17d",
+        "image": "assets/img/swatches/mill-gold.jpg",
+        "sample": "assets/img/swatches/mill-gold-sample.jpg"
       },
       {
         "code": "bronze",
         "name": "Bronze",
-        "color": "#e3d2b4",
-        "image": "assets/img/swatches/mill-bronze.jpg"
+        "color": "#b09070",
+        "image": "assets/img/swatches/mill-bronze.jpg",
+        "sample": "assets/img/swatches/mill-bronze-sample.jpg"
       },
       {
-        "code": "bronze-20",
-        "name": "Bronze",
-        "color": "#e0d0b1",
-        "image": "assets/img/swatches/mill-bronze-20.jpg"
-      },
-      {
-        "code": "bronze-30",
-        "name": "Bronze",
-        "color": "#d6c097",
-        "image": "assets/img/swatches/mill-bronze-30.jpg"
-      },
-      {
-        "code": "bronze-40",
-        "name": "Bronze",
-        "color": "#b89c71",
-        "image": "assets/img/swatches/mill-bronze-40.jpg"
-      },
-      {
-        "code": "bronze-60",
-        "name": "Bronze",
-        "color": "#684b3c",
-        "image": "assets/img/swatches/mill-bronze-60.jpg"
-      },
-      {
-        "code": "gold-20",
-        "name": "Gold",
-        "color": "#e8d5a9",
-        "image": "assets/img/swatches/mill-gold-20.jpg"
-      },
-      {
-        "code": "gold-40",
-        "name": "Gold",
-        "color": "#dec286",
-        "image": "assets/img/swatches/mill-gold-40.jpg"
-      },
-      {
-        "code": "copper-30",
+        "code": "copper",
         "name": "Copper",
-        "color": "#b67e63",
-        "image": "assets/img/swatches/mill-copper-30.jpg"
+        "color": "#d4b7b1",
+        "image": "assets/img/swatches/mill-copper.jpg",
+        "sample": "assets/img/swatches/mill-copper-sample.jpg"
       },
       {
-        "code": "copper-50",
-        "name": "Copper",
-        "color": "#c78065",
-        "image": "assets/img/swatches/mill-copper-50.jpg"
+        "code": "black",
+        "name": "Black",
+        "color": "#383737",
+        "image": "assets/img/swatches/mill-black.jpg",
+        "sample": "assets/img/swatches/mill-black-sample.jpg"
       },
       {
-        "code": "rosegoldcu30g30",
-        "name": "Rose gold",
-        "color": "#ca996e",
-        "image": "assets/img/swatches/mill-rosegoldcu30g30.jpg"
+        "code": "red",
+        "name": "Red",
+        "color": "#a23b3a",
+        "image": "assets/img/swatches/mill-red.jpg",
+        "sample": "assets/img/swatches/mill-red-sample.jpg"
       },
       {
-        "code": "rosegoldcu50g30",
-        "name": "Rose gold",
-        "color": "#844c3a",
-        "image": "assets/img/swatches/mill-rosegoldcu50g30.jpg"
+        "code": "blue",
+        "name": "Blue",
+        "color": "#4b7da0",
+        "image": "assets/img/swatches/mill-blue.jpg",
+        "sample": "assets/img/swatches/mill-blue-sample.jpg"
+      },
+      {
+        "code": "green",
+        "name": "Green",
+        "color": "#5f835e",
+        "image": "assets/img/swatches/mill-green.jpg",
+        "sample": "assets/img/swatches/mill-green-sample.jpg"
       }
     ],
     "brushed": [
       {
         "code": "natural",
-        "name": "Natural",
-        "color": "#d2c3b4",
-        "image": "assets/img/swatches/brushed-natural.jpg"
+        "name": "Natural silver",
+        "color": "#b0b1b5",
+        "image": "assets/img/swatches/brushed-natural.jpg",
+        "sample": "assets/img/swatches/brushed-natural-sample.jpg"
       },
       {
-        "code": "bronze-10",
+        "code": "gold",
+        "name": "Gold",
+        "color": "#ccac7c",
+        "image": "assets/img/swatches/brushed-gold.jpg",
+        "sample": "assets/img/swatches/brushed-gold-sample.jpg"
+      },
+      {
+        "code": "bronze",
         "name": "Bronze",
-        "color": "#e7d7bd",
-        "image": "assets/img/swatches/brushed-bronze-10.jpg"
+        "color": "#a48668",
+        "image": "assets/img/swatches/brushed-bronze.jpg",
+        "sample": "assets/img/swatches/brushed-bronze-sample.jpg"
       },
       {
-        "code": "bronze-20",
-        "name": "Bronze",
-        "color": "#b0a490",
-        "image": "assets/img/swatches/brushed-bronze-20.jpg"
-      },
-      {
-        "code": "bronze-30",
-        "name": "Bronze",
-        "color": "#dac5a5",
-        "image": "assets/img/swatches/brushed-bronze-30.jpg"
-      },
-      {
-        "code": "bronze-40",
-        "name": "Bronze",
-        "color": "#cdae82",
-        "image": "assets/img/swatches/brushed-bronze-40.jpg"
-      },
-      {
-        "code": "bronze-50",
-        "name": "Bronze",
-        "color": "#986d46",
-        "image": "assets/img/swatches/brushed-bronze-50.jpg"
-      },
-      {
-        "code": "bronze-60",
-        "name": "Bronze",
-        "color": "#895f43",
-        "image": "assets/img/swatches/brushed-bronze-60.jpg"
-      },
-      {
-        "code": "bronze-70",
-        "name": "Bronze",
-        "color": "#64473b",
-        "image": "assets/img/swatches/brushed-bronze-70.jpg"
-      },
-      {
-        "code": "copper-30",
+        "code": "copper",
         "name": "Copper",
-        "color": "#c68f72",
-        "image": "assets/img/swatches/brushed-copper-30.jpg"
+        "color": "#d0aba6",
+        "image": "assets/img/swatches/brushed-copper.jpg",
+        "sample": "assets/img/swatches/brushed-copper-sample.jpg"
       },
       {
-        "code": "rosegoldcu30g30",
-        "name": "Rose gold",
-        "color": "#d6a87e",
-        "image": "assets/img/swatches/brushed-rosegoldcu30g30.jpg"
+        "code": "black",
+        "name": "Black",
+        "color": "#3d3b3b",
+        "image": "assets/img/swatches/brushed-black.jpg",
+        "sample": "assets/img/swatches/brushed-black-sample.jpg"
       },
       {
-        "code": "rosegoldcu50g30",
-        "name": "Rose gold",
-        "color": "#b27356",
-        "image": "assets/img/swatches/brushed-rosegoldcu50g30.jpg"
+        "code": "red",
+        "name": "Red",
+        "color": "#ab4e4d",
+        "image": "assets/img/swatches/brushed-red.jpg",
+        "sample": "assets/img/swatches/brushed-red-sample.jpg"
+      },
+      {
+        "code": "blue",
+        "name": "Blue",
+        "color": "#5487af",
+        "image": "assets/img/swatches/brushed-blue.jpg",
+        "sample": "assets/img/swatches/brushed-blue-sample.jpg"
+      },
+      {
+        "code": "green",
+        "name": "Green",
+        "color": "#708e77",
+        "image": "assets/img/swatches/brushed-green.jpg",
+        "sample": "assets/img/swatches/brushed-green-sample.jpg"
       }
     ],
     "bright": [
@@ -176,23 +150,51 @@
       {
         "code": "gold",
         "name": "Gold",
-        "color": "#d9b878",
+        "color": "#f4dd9c",
         "image": "assets/img/swatches/bright-gold.jpg",
         "sample": "assets/img/swatches/bright-gold-sample.jpg"
       },
       {
+        "code": "bronze",
+        "name": "Bronze",
+        "color": "#c49466",
+        "image": "assets/img/swatches/bright-bronze.jpg",
+        "sample": "assets/img/swatches/bright-bronze-sample.jpg"
+      },
+      {
         "code": "copper",
         "name": "Copper",
-        "color": "#e2b0a4",
+        "color": "#f1c1b8",
         "image": "assets/img/swatches/bright-copper.jpg",
         "sample": "assets/img/swatches/bright-copper-sample.jpg"
       },
       {
         "code": "black",
         "name": "Black",
-        "color": "#2c2c2e",
+        "color": "#3b3a3c",
         "image": "assets/img/swatches/bright-black.jpg",
         "sample": "assets/img/swatches/bright-black-sample.jpg"
+      },
+      {
+        "code": "red",
+        "name": "Red",
+        "color": "#d5435a",
+        "image": "assets/img/swatches/bright-red.jpg",
+        "sample": "assets/img/swatches/bright-red-sample.jpg"
+      },
+      {
+        "code": "blue",
+        "name": "Blue",
+        "color": "#5099df",
+        "image": "assets/img/swatches/bright-blue.jpg",
+        "sample": "assets/img/swatches/bright-blue-sample.jpg"
+      },
+      {
+        "code": "green",
+        "name": "Green",
+        "color": "#5ea174",
+        "image": "assets/img/swatches/bright-green.jpg",
+        "sample": "assets/img/swatches/bright-green-sample.jpg"
       }
     ]
   }
