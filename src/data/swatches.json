@@ -186,6 +186,13 @@
         "color": "#e2b0a4",
         "image": "assets/img/swatches/bright-copper.jpg",
         "sample": "assets/img/swatches/bright-copper-sample.jpg"
+      },
+      {
+        "code": "black",
+        "name": "Black",
+        "color": "#2c2c2e",
+        "image": "assets/img/swatches/bright-black.jpg",
+        "sample": "assets/img/swatches/bright-black-sample.jpg"
       }
     ]
   }
