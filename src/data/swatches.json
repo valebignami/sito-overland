@@ -34,21 +34,21 @@
       {
         "code": "gold",
         "name": "Gold",
-        "color": "#d2b17d",
+        "color": "#c39d4a",
         "image": "assets/img/swatches/mill-gold.jpg",
         "sample": "assets/img/swatches/mill-gold-sample.jpg"
       },
       {
         "code": "bronze",
         "name": "Bronze",
-        "color": "#b09070",
+        "color": "#9e7751",
         "image": "assets/img/swatches/mill-bronze.jpg",
         "sample": "assets/img/swatches/mill-bronze-sample.jpg"
       },
       {
         "code": "copper",
         "name": "Copper",
-        "color": "#d4b7b1",
+        "color": "#b58876",
         "image": "assets/img/swatches/mill-copper.jpg",
         "sample": "assets/img/swatches/mill-copper-sample.jpg"
       },
@@ -62,21 +62,21 @@
       {
         "code": "red",
         "name": "Red",
-        "color": "#a23b3a",
+        "color": "#991f20",
         "image": "assets/img/swatches/mill-red.jpg",
         "sample": "assets/img/swatches/mill-red-sample.jpg"
       },
       {
         "code": "blue",
         "name": "Blue",
-        "color": "#4b7da0",
+        "color": "#35729a",
         "image": "assets/img/swatches/mill-blue.jpg",
         "sample": "assets/img/swatches/mill-blue-sample.jpg"
       },
       {
         "code": "green",
         "name": "Green",
-        "color": "#5f835e",
+        "color": "#407c3e",
         "image": "assets/img/swatches/mill-green.jpg",
         "sample": "assets/img/swatches/mill-green-sample.jpg"
       }
@@ -92,21 +92,21 @@
       {
         "code": "gold",
         "name": "Gold",
-        "color": "#ccac7c",
+        "color": "#bd994c",
         "image": "assets/img/swatches/brushed-gold.jpg",
         "sample": "assets/img/swatches/brushed-gold-sample.jpg"
       },
       {
         "code": "bronze",
         "name": "Bronze",
-        "color": "#a48668",
+        "color": "#936f4b",
         "image": "assets/img/swatches/brushed-bronze.jpg",
         "sample": "assets/img/swatches/brushed-bronze-sample.jpg"
       },
       {
         "code": "copper",
         "name": "Copper",
-        "color": "#d0aba6",
+        "color": "#b27a64",
         "image": "assets/img/swatches/brushed-copper.jpg",
         "sample": "assets/img/swatches/brushed-copper-sample.jpg"
       },
@@ -120,21 +120,21 @@
       {
         "code": "red",
         "name": "Red",
-        "color": "#ab4e4d",
+        "color": "#a23433",
         "image": "assets/img/swatches/brushed-red.jpg",
         "sample": "assets/img/swatches/brushed-red-sample.jpg"
       },
       {
         "code": "blue",
         "name": "Blue",
-        "color": "#5487af",
+        "color": "#3d7aa9",
         "image": "assets/img/swatches/brushed-blue.jpg",
         "sample": "assets/img/swatches/brushed-blue-sample.jpg"
       },
       {
         "code": "green",
         "name": "Green",
-        "color": "#708e77",
+        "color": "#548660",
         "image": "assets/img/swatches/brushed-green.jpg",
         "sample": "assets/img/swatches/brushed-green-sample.jpg"
       }
@@ -150,21 +150,21 @@
       {
         "code": "gold",
         "name": "Gold",
-        "color": "#f4dd9c",
+        "color": "#d0a957",
         "image": "assets/img/swatches/bright-gold.jpg",
         "sample": "assets/img/swatches/bright-gold-sample.jpg"
       },
       {
         "code": "bronze",
         "name": "Bronze",
-        "color": "#c49466",
+        "color": "#a26d3a",
         "image": "assets/img/swatches/bright-bronze.jpg",
         "sample": "assets/img/swatches/bright-bronze-sample.jpg"
       },
       {
         "code": "copper",
         "name": "Copper",
-        "color": "#f1c1b8",
+        "color": "#be7254",
         "image": "assets/img/swatches/bright-copper.jpg",
         "sample": "assets/img/swatches/bright-copper-sample.jpg"
       },
@@ -178,21 +178,21 @@
       {
         "code": "red",
         "name": "Red",
-        "color": "#d5435a",
+        "color": "#ba1b36",
         "image": "assets/img/swatches/bright-red.jpg",
         "sample": "assets/img/swatches/bright-red-sample.jpg"
       },
       {
         "code": "blue",
         "name": "Blue",
-        "color": "#5099df",
+        "color": "#287bc6",
         "image": "assets/img/swatches/bright-blue.jpg",
         "sample": "assets/img/swatches/bright-blue-sample.jpg"
       },
       {
         "code": "green",
         "name": "Green",
-        "color": "#5ea174",
+        "color": "#238c45",
         "image": "assets/img/swatches/bright-green.jpg",
         "sample": "assets/img/swatches/bright-green-sample.jpg"
       }
