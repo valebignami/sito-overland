@@ -17,8 +17,8 @@
     "bright": {
       "label": "Bright",
       "strip": "mirror",
-      "image": "assets/img/finish-bright.jpg",
-      "imageAlt": "Black sphere reflected in a bright aluminium surface",
+      "image": "assets/img/swatches/bright-natural-sample.jpg",
+      "imageAlt": "Black sphere reflected in a bright natural silver aluminium surface",
       "desc": "Smooth and highly reflective, for surfaces that should shine."
     }
   },
