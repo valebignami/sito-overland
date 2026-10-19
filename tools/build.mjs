@@ -21,8 +21,9 @@ const generated = {
       `          <button class="tab" type="button" role="tab" id="tab-${key}" aria-controls="panel-${key}" aria-selected="${i === 0}"${i === 0 ? '' : ' tabindex="-1"'}>${esc(data.finishes[key].label)}</button>`).join('\n');
     const panels = keys.map((key) => {
       const f = data.finishes[key];
+      // The round shade uses s.image; the larger preview uses s.sample when the shade has one
       const items = data.swatches[key].map((s, n, all) =>
-        `              <li><button class="swatch-button" type="button" data-sample="${s.image}" aria-label="Preview ${esc(f.label)} shade ${n + 1} of ${all.length}" aria-pressed="false"><img src="${s.image}" alt="" width="300" height="300" loading="lazy"></button></li>`).join('\n');
+        `              <li><button class="swatch-button" type="button" data-sample="${s.sample ?? s.image}" aria-label="Preview ${esc(f.label)} shade ${n + 1} of ${all.length}" aria-pressed="false"><img src="${s.image}" alt="" width="300" height="300" loading="lazy"></button></li>`).join('\n');
       return `        <div class="tab-panel" tabindex="0" role="tabpanel" id="panel-${key}" aria-labelledby="tab-${key}">
           <figure class="tab-finish">
             <img class="rounded" src="${f.image}" alt="${esc(f.imageAlt)}" width="420" height="420" loading="lazy">

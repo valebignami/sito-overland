@@ -168,75 +168,24 @@
     "bright": [
       {
         "code": "natural",
-        "name": "Natural",
-        "color": "#c4c0b7",
-        "image": "assets/img/swatches/bright-natural.jpg"
+        "name": "Natural silver",
+        "color": "#cbccd7",
+        "image": "assets/img/swatches/bright-natural.jpg",
+        "sample": "assets/img/swatches/bright-natural-sample.jpg"
       },
       {
-        "code": "bronze-10",
-        "name": "Bronze",
-        "color": "#d2cbb9",
-        "image": "assets/img/swatches/bright-bronze-10.jpg"
+        "code": "gold",
+        "name": "Gold",
+        "color": "#d9b878",
+        "image": "assets/img/swatches/bright-gold.jpg",
+        "sample": "assets/img/swatches/bright-gold-sample.jpg"
       },
       {
-        "code": "bronze-20",
-        "name": "Bronze",
-        "color": "#e4ddc9",
-        "image": "assets/img/swatches/bright-bronze-20.jpg"
-      },
-      {
-        "code": "bronze-30",
-        "name": "Bronze",
-        "color": "#544d45",
-        "image": "assets/img/swatches/bright-bronze-30.jpg"
-      },
-      {
-        "code": "bronze-40",
-        "name": "Bronze",
-        "color": "#cdbc8a",
-        "image": "assets/img/swatches/bright-bronze-40.jpg"
-      },
-      {
-        "code": "bronze-50",
-        "name": "Bronze",
-        "color": "#88653b",
-        "image": "assets/img/swatches/bright-bronze-50.jpg"
-      },
-      {
-        "code": "bronze-60",
-        "name": "Bronze",
-        "color": "#6d4b2e",
-        "image": "assets/img/swatches/bright-bronze-60.jpg"
-      },
-      {
-        "code": "bronze-85",
-        "name": "Bronze",
-        "color": "#1f1e1d",
-        "image": "assets/img/swatches/bright-bronze-85.jpg"
-      },
-      {
-        "code": "copper-30",
+        "code": "copper",
         "name": "Copper",
-        "color": "#ac7863",
-        "image": "assets/img/swatches/bright-copper-30.jpg"
-      },
-      {
-        "code": "copper-50",
-        "name": "Copper",
-        "color": "#8f5040",
-        "image": "assets/img/swatches/bright-copper-50.jpg"
-      },
-      {
-        "code": "rosegoldcu30g30",
-        "name": "Rose gold",
-        "color": "#cea177",
-        "image": "assets/img/swatches/bright-rosegoldcu30g30.jpg"
-      },
-      {
-        "code": "rosegoldcu50g30",
-        "name": "Rose gold",
-        "color": "#ab602e",
-        "image": "assets/img/swatches/bright-rosegoldcu50g30.jpg"
+        "color": "#e2b0a4",
+        "image": "assets/img/swatches/bright-copper.jpg",
+        "sample": "assets/img/swatches/bright-copper-sample.jpg"
       }
     ]
   }
